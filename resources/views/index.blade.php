@@ -34,10 +34,10 @@
               <!-- nav menu -->
               <ul class="navbar hidden lg:flex lg:flex-row text-gray-400 text-sm items-center font-bold">
                 <li class="active relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="index.html">Home</a>
+                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Beranda</a>
                 </li>
                 <li class="dropdown relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Pages</a>
+                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Layanan</a>
 
                   <ul class="dropdown-menu font-normal absolute left-0 right-auto top-full z-50 border-b-0 text-left bg-white text-gray-700 border border-gray-100" style="min-width: 12rem;">
                   	<li class="subdropdown relative hover:bg-gray-50">
@@ -58,7 +58,7 @@
 
                       <!--dropdown submenu-->
                       <ul class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100" style="min-width: 12rem;">
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="404.html">404</a></li>
+                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="/test">404</a></li>
                         <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="author.html">Author</a></li>
                         <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="category.html">Category</a></li>
                         <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="search.html">Search</a></li>
@@ -94,22 +94,16 @@
                   </ul>
                 </li>
                 <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Sport</a>
+                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Berita</a>
                 </li>
                 <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Travel</a>
+                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Galeri</a>
                 </li>
                 <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Techno</a>
+                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Kontak</a>
                 </li>
                 <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Worklife</a>
-                </li>
-                <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Future</a>
-                </li>
-                <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">More</a>
+                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">FAQ</a>
                 </li>
               </ul>
 
