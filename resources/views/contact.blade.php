@@ -135,7 +135,7 @@ License: You must have a valid license from official store to legally use the th
                   </button>
                   <div class="dropdown-menu absolute left-auto right-0 top-full z-50 text-left bg-white text-gray-700 border border-gray-100 mt-1 p-3" style="min-width: 15rem;">
                     <div class="flex flex-wrap items-stretch w-full relative">
-                      <input type="text" class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="text" placeholder="Search..." aria-label="search">
+                      <input type="text" class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0" name="text" placeholder="Search..." aria-label="search">
                       <div class="flex -mr-px">
                         <button class="flex items-center py-2 px-5 -ml-1 leading-5 text-gray-100 bg-black hover:text-white hover:bg-gray-900 hover:ring-0 focus:outline-none focus:ring-0" type="submit">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -175,7 +175,7 @@ License: You must have a valid license from official store to legally use the th
     </div>
 
     <!-- Mobile navbar -->
-    <nav id="mobile-nav" class="side-menu flex flex-col right-0 w-64 fixed top-0 bg-white dark:bg-gray-800 h-full overflow-auto z-40">
+    <nav id="mobile-nav" class="side-menu flex flex-col right-0 w-64 fixed top-0 bg-white h-full overflow-auto z-40">
       <div class="mb-auto">
         <!--navigation-->
         <nav class="relative flex flex-wrap">
@@ -192,7 +192,7 @@ License: You must have a valid license from official store to legally use the th
               </a>
 
               <!-- dropdown menu -->
-              <ul class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white dark:bg-gray-800 mb-4" style="min-width: 12rem">
+              <ul class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white mb-4" style="min-width: 12rem">
                 <!--submenu-->
                 <li class="subdropdown relative">
                   <a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="javascript:;">
@@ -200,7 +200,7 @@ License: You must have a valid license from official store to legally use the th
                   </a>
 
                   <!--dropdown submenu-->
-                  <ul class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white dark:bg-gray-800" style="min-width: 12rem">
+                  <ul class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white" style="min-width: 12rem">
                     <li><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="#">Dropdown sub item</a></li>
                     <li><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="#">Dropdown sub item</a></li>
                     <li><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="#">Dropdown sub item</a></li>
@@ -276,19 +276,19 @@ License: You must have a valid license from official store to legally use the th
                   <form class="flex flex-wrap flex-row -mx-4">
                     <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 mb-6">
                       <label for="inputfirst4" class="inline-block mb-2">First name</label>
-                      <input type="text" class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="inputfirst4" required>
+                      <input type="text" class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0" id="inputfirst4" required>
                     </div>
                     <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 mb-6">
                       <label for="inputlast4" class="inline-block mb-2">Last name</label>
-                      <input type="text" class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="inputlast4" required>
+                      <input type="text" class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0" id="inputlast4" required>
                     </div>
                     <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 mb-6">
                       <label for="inpuemail4" class="inline-block mb-2">Email</label>
-                      <input type="email" class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="inpuemail4" required>
+                      <input type="email" class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0" id="inpuemail4" required>
                     </div>
                     <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 mb-6">
                       <label for="inputurgent" class="inline-block mb-2">Urgency</label>
-                      <select id="inputurgent" class="inline-block w-full leading-5 relative py-3 pl-3 pr-8 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 select-caret appearance-none dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" required>
+                      <select id="inputurgent" class="inline-block w-full leading-5 relative py-3 pl-3 pr-8 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 select-caret appearance-none" required>
                         <option>Low...</option>
                         <option>Medium...</option>
                         <option>Hight...</option>
@@ -296,11 +296,11 @@ License: You must have a valid license from official store to legally use the th
                     </div>
                     <div class="flex-shrink max-w-full px-4 w-full mb-6">
                       <label for="exampleTextarea1" class="inline-block mb-2">Messages</label>
-                      <textarea class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="exampleTextarea1" rows="3"></textarea>
+                      <textarea class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0" id="exampleTextarea1" rows="3"></textarea>
                     </div>
                     <div class="flex-shrink max-w-full px-4 w-full mb-6">
                       <label class="flex items-center">
-                        <input type="checkbox" name="checked-demo" value="1" class="form-checkbox h-5 w-5 text-blue-500 dark:bg-gray-700 border border-gray-100 dark:border-gray-700 focus:outline-none" required>
+                        <input type="checkbox" name="checked-demo" value="1" class="form-checkbox h-5 w-5 text-blue-500 border border-gray-100 focus:outline-none" required>
                         <span class="text-gray-700 ml-4">I agree to the Terms of Use</span>
                       </label>
                     </div>
@@ -456,7 +456,7 @@ License: You must have a valid license from official store to legally use the th
   </footer><!-- end footer -->
 
   <!-- =========={ SCROLL TO TOP }==========  -->
-  <a href="#" class="back-top fixed p-4 rounded bg-gray-100 border border-gray-100 text-gray-500 dark:bg-gray-900 dark:border-gray-800 right-4 bottom-4 hidden" aria-label="Scroll To Top">
+  <a href="#" class="back-top fixed p-4 rounded bg-gray-100 border border-gray-100 text-gray-500 right-4 bottom-4 hidden" aria-label="Scroll To Top">
     <svg width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
       <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 3.707 5.354 6.354a.5.5 0 11-.708-.708l3-3z" clip-rule="evenodd"></path>

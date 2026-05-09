@@ -135,7 +135,7 @@ License: You must have a valid license from official store to legally use the th
                   </button>
                   <div class="dropdown-menu absolute left-auto right-0 top-full z-50 text-left bg-white text-gray-700 border border-gray-100 mt-1 p-3" style="min-width: 15rem;">
                     <div class="flex flex-wrap items-stretch w-full relative">
-                      <input type="text" class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="text" placeholder="Search..." aria-label="search">
+                      <input type="text" class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0" name="text" placeholder="Search..." aria-label="search">
                       <div class="flex -mr-px">
                         <button class="flex items-center py-2 px-5 -ml-1 leading-5 text-gray-100 bg-black hover:text-white hover:bg-gray-900 hover:ring-0 focus:outline-none focus:ring-0" type="submit">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -175,7 +175,7 @@ License: You must have a valid license from official store to legally use the th
     </div>
 
     <!-- Mobile navbar -->
-    <nav id="mobile-nav" class="side-menu flex flex-col right-0 w-64 fixed top-0 bg-white dark:bg-gray-800 h-full overflow-auto z-40">
+    <nav id="mobile-nav" class="side-menu flex flex-col right-0 w-64 fixed top-0 bg-white h-full overflow-auto z-40">
       <div class="mb-auto">
         <!--navigation-->
         <nav class="relative flex flex-wrap">
@@ -192,7 +192,7 @@ License: You must have a valid license from official store to legally use the th
               </a>
 
               <!-- dropdown menu -->
-              <ul class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white dark:bg-gray-800 mb-4" style="min-width: 12rem">
+              <ul class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white mb-4" style="min-width: 12rem">
                 <!--submenu-->
                 <li class="subdropdown relative">
                   <a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="javascript:;">
@@ -200,7 +200,7 @@ License: You must have a valid license from official store to legally use the th
                   </a>
 
                   <!--dropdown submenu-->
-                  <ul class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white dark:bg-gray-800" style="min-width: 12rem">
+                  <ul class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white" style="min-width: 12rem">
                     <li><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="#">Dropdown sub item</a></li>
                     <li><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="#">Dropdown sub item</a></li>
                     <li><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="#">Dropdown sub item</a></li>
@@ -424,15 +424,15 @@ License: You must have a valid license from official store to legally use the th
               <nav aria-label="Page navigation">
                 <ul class="flex justify-center space-x-0">
                   <li>
-                    <a class="block relative py-3 px-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:text-gray-100 hover:bg-gray-700 dark:hover:bg-gray-700 -mr-0.5 rounded-l bg-gray-700 dark:bg-gray-700 text-gray-100" href="#" aria-label="Previous">
+                    <a class="block relative py-3 px-4 bg-white border border-gray-200 hover:text-gray-100 hover:bg-gray-700 -mr-0.5 rounded-l bg-gray-700 text-gray-100" href="#" aria-label="Previous">
                       <span aria-hidden="true">«</span>
                     </a>
                   </li>
-                  <li><a class="block relative py-3 px-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:text-gray-100 hover:bg-gray-700 dark:hover:bg-gray-700 -mr-0.5" href="#">1</a></li>
-                  <li><a class="block relative py-3 px-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:text-gray-100 hover:bg-gray-700 dark:hover:bg-gray-700 -mr-0.5" href="#">2</a></li>
-                  <li><a class="block relative py-3 px-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:text-gray-100 hover:bg-gray-700 dark:hover:bg-gray-700 -mr-0.5" href="#">3</a></li>
+                  <li><a class="block relative py-3 px-4 bg-white border border-gray-200 hover:text-gray-100 hover:bg-gray-700 -mr-0.5" href="#">1</a></li>
+                  <li><a class="block relative py-3 px-4 bg-white border border-gray-200 hover:text-gray-100 hover:bg-gray-700 -mr-0.5" href="#">2</a></li>
+                  <li><a class="block relative py-3 px-4 bg-white border border-gray-200 hover:text-gray-100 hover:bg-gray-700 -mr-0.5" href="#">3</a></li>
                   <li>
-                    <a class="block relative py-3 px-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:text-gray-100 hover:bg-gray-700 dark:hover:bg-gray-700 -mr-0.5 rounded-r" href="#" aria-label="Next">
+                    <a class="block relative py-3 px-4 bg-white border border-gray-200 hover:text-gray-100 hover:bg-gray-700 -mr-0.5 rounded-r" href="#" aria-label="Next">
                       <span aria-hidden="true">»</span>
                     </a>
                   </li>
@@ -582,7 +582,7 @@ License: You must have a valid license from official store to legally use the th
   </footer><!-- end footer -->
 
   <!-- =========={ SCROLL TO TOP }==========  -->
-  <a href="#" class="back-top fixed p-4 rounded bg-gray-100 border border-gray-100 text-gray-500 dark:bg-gray-900 dark:border-gray-800 right-4 bottom-4 hidden" aria-label="Scroll To Top">
+  <a href="#" class="back-top fixed p-4 rounded bg-gray-100 border border-gray-100 text-gray-500 right-4 bottom-4 hidden" aria-label="Scroll To Top">
     <svg width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
       <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 3.707 5.354 6.354a.5.5 0 11-.708-.708l3-3z" clip-rule="evenodd"></path>

@@ -135,7 +135,7 @@ License: You must have a valid license from official store to legally use the th
                   </button>
                   <div class="dropdown-menu absolute left-auto right-0 top-full z-50 text-left bg-white text-gray-700 border border-gray-100 mt-1 p-3" style="min-width: 15rem;">
                     <div class="flex flex-wrap items-stretch w-full relative">
-                      <input type="text" class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="text" placeholder="Search..." aria-label="search">
+                      <input type="text" class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0" name="text" placeholder="Search..." aria-label="search">
                       <div class="flex -mr-px">
                         <button class="flex items-center py-2 px-5 -ml-1 leading-5 text-gray-100 bg-black hover:text-white hover:bg-gray-900 hover:ring-0 focus:outline-none focus:ring-0" type="submit">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -175,7 +175,7 @@ License: You must have a valid license from official store to legally use the th
     </div>
 
     <!-- Mobile navbar -->
-    <nav id="mobile-nav" class="side-menu flex flex-col right-0 w-64 fixed top-0 bg-white dark:bg-gray-800 h-full overflow-auto z-40">
+    <nav id="mobile-nav" class="side-menu flex flex-col right-0 w-64 fixed top-0 bg-white h-full overflow-auto z-40">
       <div class="mb-auto">
         <!--navigation-->
         <nav class="relative flex flex-wrap">
@@ -192,7 +192,7 @@ License: You must have a valid license from official store to legally use the th
               </a>
 
               <!-- dropdown menu -->
-              <ul class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white dark:bg-gray-800 mb-4" style="min-width: 12rem">
+              <ul class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white mb-4" style="min-width: 12rem">
                 <!--submenu-->
                 <li class="subdropdown relative">
                   <a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="javascript:;">
@@ -200,7 +200,7 @@ License: You must have a valid license from official store to legally use the th
                   </a>
 
                   <!--dropdown submenu-->
-                  <ul class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white dark:bg-gray-800" style="min-width: 12rem">
+                  <ul class="dropdown-menu block rounded rounded-t-none top-full z-50 ml-4 py-0.5 text-left bg-white" style="min-width: 12rem">
                     <li><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="#">Dropdown sub item</a></li>
                     <li><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="#">Dropdown sub item</a></li>
                     <li><a class="block w-full py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="#">Dropdown sub item</a></li>
@@ -276,13 +276,13 @@ License: You must have a valid license from official store to legally use the th
                 <div class="leading-relaxed pb-4">
                   <p class="mb-5">Aenean sodales lacus est, at ultricies augue ele ifend sit amet. <ins>Be yourself</ins> everyone else is already taken, sem mi placerat felis, ac suscip ligula ex id metus. Vivamus aliquet sit amet nisi non faucibus. Orci varius natoque penatibus et magnis dis parturient montes.</p>
 
-                  <h2 class="text-xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Start your Morning with Smiles</h2>
+                  <h2 class="text-xl leading-normal mb-2 font-semibold text-gray-800">Start your Morning with Smiles</h2>
                   <p class="mb-5">Integer egestas ipsum eget metus sodales consectetur. Nullam ultricies posuere cursus. Duis vitae lorem porta, venenatis nibh ac, laoreet massa. Nam risus lacus, porta eu diam id, fringilla porta risus. Aenean sit amet malesuada diam.</p>
                   <figure class="text-center mb-6">
                     <img class="max-w-full h-auto" src="src/img/dummy/post1.jpg" alt="Image description">
                     <figcaption> Type here your description</figcaption>
                   </figure>
-                  <h3 class="text-2xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Ordered and unordered list</h3>
+                  <h3 class="text-2xl leading-normal mb-2 font-semibold text-gray-800">Ordered and unordered list</h3>
                   <ul class="pl-8 mb-4">
                     <li class="list-disc list-inside">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
                       <ol class="pl-8 mb-4">
@@ -297,7 +297,7 @@ License: You must have a valid license from official store to legally use the th
                   <p class="mb-5">Cras justo velit, ultrices vel vehicula eu, viverra in turpis. Donec lobortis at lorem ac semper. Mauris malesuada ligula in interdum pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                   
                   <p class="mb-5">Integer egestas ipsum eget metus sodales consectetur. Nullam ultricies posuere cursus. Duis vitae lorem porta, venenatis nibh ac, laoreet massa. Nam risus lacus, porta eu diam id, fringilla porta risus. Aenean sit amet malesuada diam.</p>
-                  <blockquote class="relative p-4 border-l-4 border-red-700 bg-gray-100 dark:bg-gray-900 dark:bg-opacity-40 mb-4 text-xl">
+                  <blockquote class="relative p-4 border-l-4 border-red-700 bg-gray-100 mb-4 text-xl">
                     <span class="absolute opacity-80 w-8 h-8">
                       <svg xmlns="http://www.w3.org/2000/svg" class="text-red-700" viewBox="0 0 270.000000 270.000000"><g transform="translate(0.000000,270.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M920 2182 c-290 -124 -482 -341 -540 -610 -30 -140 -40 -296 -40 -644 l0 -328 370 0 370 0 0 370 0 370 -181 0 -181 0 7 63 c26 243 129 387 342 477 35 15 66 29 69 32 7 7 -132 298 -143 298 -4 0 -37 -13 -73 -28z"></path><path d="M2179 2186 c-249 -103 -442 -295 -520 -516 -50 -142 -61 -247 -66 -677 l-5 -393 371 0 371 0 0 370 0 370 -181 0 -181 0 7 53 c21 170 67 281 150 363 51 49 143 107 215 134 19 7 39 17 44 21 10 9 -124 298 -139 298 -5 0 -35 -10 -66 -23z"></path></g></svg>
                     </span>
@@ -317,7 +317,7 @@ License: You must have a valid license from official store to legally use the th
 
                   <p class="mb-5">Fusce elementum placerat tellus id. Nulla sit amet pretium enim, in vehicula ligula. Proin nec malesuada liberoque blandit. Sed condimentum neque ligula, id dapibus enim ornare id. Duis porttitor, risus vehicula convallis sagittis, ligula nisi iaculis libero, sit amet convallis nulla magna non tortor.</p>
 
-                  <h2 class="float-left w-full text-xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Live as if you were to die tomorrow.</h2>
+                  <h2 class="float-left w-full text-xl leading-normal mb-2 font-semibold text-gray-800">Live as if you were to die tomorrow.</h2>
 
                   <p class="mb-5">Nullam ut tempus mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus libero dolor, condimentum eu augue et, placerat tempus risus. Quisque massa purus, ullamcorper eget ipsum et, eleifend suscipit mi. Duis auctor tortor a dui accumsan, sed semper nunc iaculis.</p>
 
@@ -334,7 +334,7 @@ License: You must have a valid license from official store to legally use the th
                   <p class="mb-5">Morbi at lacinia risus. Donec vitae justo sed augue sollicitudin dignissim ut vitae ipsum. Proin at imperdiet ante, non blandit mauris. Nullam eu lobortis justo.</p>
                   <p class="mb-5">Fusce vestibulum blandit justo non rhoncus. Maecenas eget felis id orci ultricies frin gilla. Aliquam suscipit enim felis. Praesent arcu dui, rutrum et molestie sed, volutpat auctor lorem. Fusce sit amet libero odio. Integer sed nisl turpis. Integer mollis sed est eget convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                 
-                  <div class="relative flex flex-row items-center justify-between overflow-hidden bg-gray-100 dark:bg-gray-900 dark:bg-opacity-20 mt-12 mb-2 px-6 py-2">
+                  <div class="relative flex flex-row items-center justify-between overflow-hidden bg-gray-100 mt-12 mb-2 px-6 py-2">
                     <div class="my-4 text-sm">
                       <!--author-->
                       <span class="mr-2 md:mr-4">
@@ -393,11 +393,11 @@ License: You must have a valid license from official store to legally use the th
                 <!-- author -->
                 <div class="flex flex-wrap flex-row -mx-4 justify-center py-4">
                   <div class="flex-shrink max-w-full px-4 w-1/3 sm:w-1/4 md:w-1/6">
-                    <a href="#"><img class="rounded-full border max-w-full h-auto dark:border-gray-700" src="src/img/dummy/avatar.jpg" alt="author"></a>
+                    <a href="#"><img class="rounded-full border max-w-full h-auto" src="src/img/dummy/avatar.jpg" alt="author"></a>
                   </div>
                   <div class="flex-shrink max-w-full px-4 w-2/3 sm:w-3/4 md:w-10/12">
                     <!--name-->
-                    <p class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">
+                    <p class="text-lg leading-normal mb-2 font-semibold text-gray-800">
                       <span class="font-semibold">Ari budin</span>
                     </p>
                     <!-- website -->
@@ -410,16 +410,16 @@ License: You must have a valid license from official store to legally use the th
                 <!-- Comments -->
                 <div id="comments" class="pt-16">
                   <!--title-->
-                  <h3 class="text-2xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">5 Comments</h3>
+                  <h3 class="text-2xl leading-normal mb-2 font-semibold text-gray-800">5 Comments</h3>
 
                   <!--comment list-->
                   <ol class="mb-4">
                     <li class="py-2 mt-6">
-                      <div class="pb-4 border-b border-gray-200 dark:border-gray-600 border-dashed">
+                      <div class="pb-4 border-b border-gray-200 border-dashed">
                         <footer>
-                          <img class="w-20 h-20 border border-gray-200 dark:border-gray-700 max-w-full float-left mr-4" src="src/img/avatar2.jpg" alt="avatar">
+                          <img class="w-20 h-20 border border-gray-200 max-w-full float-left mr-4" src="src/img/avatar2.jpg" alt="avatar">
                           <div>
-                            <a class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100" href="#" target="_blank">Carlos vila</a>
+                            <a class="text-lg leading-normal mb-2 font-semibold text-gray-800" href="#" target="_blank">Carlos vila</a>
                             <span class="md:float-right text-sm">
                               <time datetime="2020-10-27">Oct 27, 2020</time>
                             </span>
@@ -434,11 +434,11 @@ License: You must have a valid license from official store to legally use the th
                       </div>
                       <ul class="ml-12 md:ml-24">
                         <li class="py-2 mt-6">
-                          <div class="pb-4 border-b border-gray-200 dark:border-gray-600 border-dashed">
+                          <div class="pb-4 border-b border-gray-200 border-dashed">
                             <footer>
-                              <img class="w-20 h-20 border border-gray-200 dark:border-gray-700 max-w-full float-left mr-4" src="src/img/avatar.jpg" alt="avatar">
+                              <img class="w-20 h-20 border border-gray-200 max-w-full float-left mr-4" src="src/img/avatar.jpg" alt="avatar">
                               <div>
-                                <a class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100" href="#" target="_blank">Ari Budin</a>
+                                <a class="text-lg leading-normal mb-2 font-semibold text-gray-800" href="#" target="_blank">Ari Budin</a>
                                 <span class="md:float-right text-sm">
                                   <time datetime="2020-10-27">Oct 27, 2020</time>
                                 </span>
@@ -453,11 +453,11 @@ License: You must have a valid license from official store to legally use the th
                           </div>
                           <ul class="md:ml-24">
                             <li class="py-2 mt-6" id="comment-5">
-                              <div class="pb-4 border-b border-gray-200 dark:border-gray-600 border-dashed">
+                              <div class="pb-4 border-b border-gray-200 border-dashed">
                                 <footer>
-                                  <img class="w-20 h-20 border border-gray-200 dark:border-gray-700 max-w-full float-left mr-4" src="src/img/avatar2.jpg" alt="avatar">
+                                  <img class="w-20 h-20 border border-gray-200 max-w-full float-left mr-4" src="src/img/avatar2.jpg" alt="avatar">
                                   <div>
-                                    <a class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100" href="#" target="_blank">Carlos vila</a>
+                                    <a class="text-lg leading-normal mb-2 font-semibold text-gray-800" href="#" target="_blank">Carlos vila</a>
                                     <span class="md:float-right text-sm">
                                       <time datetime="2020-10-27">Oct 27, 2020</time>
                                     </span>
@@ -476,11 +476,11 @@ License: You must have a valid license from official store to legally use the th
                       </ul>
                     </li>
                     <li class="py-2 mt-6">
-                      <div class="pb-4 border-b border-gray-200 dark:border-gray-600 border-dashed">
+                      <div class="pb-4 border-b border-gray-200 border-dashed">
                         <footer>
-                          <img class="w-20 h-20 border border-gray-200 dark:border-gray-700 max-w-full float-left mr-4" src="src/img/avatar.jpg" alt="avatar">
+                          <img class="w-20 h-20 border border-gray-200 max-w-full float-left mr-4" src="src/img/avatar.jpg" alt="avatar">
                           <div>
-                            <a class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100" href="#" target="_blank">Ari Budin</a>
+                            <a class="text-lg leading-normal mb-2 font-semibold text-gray-800" href="#" target="_blank">Ari Budin</a>
                             <span class="md:float-right text-sm">
                               <time datetime="2020-10-27">Oct 27, 2020</time>
                             </span>
@@ -495,11 +495,11 @@ License: You must have a valid license from official store to legally use the th
                       </div>
                       <ul class="ml-12 md:ml-24">
                         <li class="py-2 mt-6">
-                          <div class="pb-4 border-b border-gray-200 dark:border-gray-600 border-dashed">
+                          <div class="pb-4 border-b border-gray-200 border-dashed">
                             <footer>
-                              <img class="w-20 h-20 border border-gray-200 dark:border-gray-700 max-w-full float-left mr-4" src="src/img/avatar2.jpg" alt="avatar">
+                              <img class="w-20 h-20 border border-gray-200 max-w-full float-left mr-4" src="src/img/avatar2.jpg" alt="avatar">
                               <div>
-                                <a class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100" href="#" target="_blank">Carlos vila</a>
+                                <a class="text-lg leading-normal mb-2 font-semibold text-gray-800" href="#" target="_blank">Carlos vila</a>
                                 <span class="md:float-right text-sm">
                                   <time datetime="2020-10-27">Oct 27, 2020</time>
                                 </span>
@@ -519,26 +519,26 @@ License: You must have a valid license from official store to legally use the th
 
                   <!--comment form-->
                   <div id="comment-form" class="mt-12">
-                    <h4 class="text-2xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">LEAVE A REPLY</h4>
+                    <h4 class="text-2xl leading-normal mb-2 font-semibold text-gray-800">LEAVE A REPLY</h4>
                     <p class="mb-5">Your email address will not be published</p>
                     <div>
                       <form action="#" novalidate="">
                         <div class="mt-2"></div>
                         <div class="mb-6">
-                          <textarea class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" placeholder="Comment" aria-label="insert comment" rows="4" required=""></textarea>
+                          <textarea class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0" placeholder="Comment" aria-label="insert comment" rows="4" required=""></textarea>
                         </div>
                         <div class="mb-6">
-                          <input class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" placeholder="Name" aria-label="name" type="text" required="">
+                          <input class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0" placeholder="Name" aria-label="name" type="text" required="">
                         </div>
                         <div class="mb-6">
-                          <input class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" placeholder="Email" aria-label="email" type="text" required="">
+                          <input class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0" placeholder="Email" aria-label="email" type="text" required="">
                         </div>
                         <div class="mb-6">
-                          <input class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" placeholder="Website:" aria-label="website" type="text">
+                          <input class="w-full leading-5 relative py-3 px-5 text-gray-800 bg-white border border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0" placeholder="Website:" aria-label="website" type="text">
                         </div>
                         <div class="mb-6">
                           <div>
-                            <input class="form-checkbox h-5 w-5 text-red-500 dark:bg-gray-700 border border-gray-100 dark:border-gray-700 focus:outline-none" id="comment-cookies" name="comment-cookies" type="checkbox" value="yes">
+                            <input class="form-checkbox h-5 w-5 text-red-500 border border-gray-100 focus:outline-none" id="comment-cookies" name="comment-cookies" type="checkbox" value="yes">
                             <label class="ml-2" for="comment-cookies">
                               Save my name, email, and website in this browser for the next time I comment.
                             </label>
@@ -696,7 +696,7 @@ License: You must have a valid license from official store to legally use the th
   </footer><!-- end footer -->
 
   <!-- =========={ SCROLL TO TOP }==========  -->
-  <a href="#" class="back-top fixed p-4 rounded bg-gray-100 border border-gray-100 text-gray-500 dark:bg-gray-900 dark:border-gray-800 right-4 bottom-4 hidden" aria-label="Scroll To Top">
+  <a href="#" class="back-top fixed p-4 rounded bg-gray-100 border border-gray-100 text-gray-500 right-4 bottom-4 hidden" aria-label="Scroll To Top">
     <svg width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
       <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 3.707 5.354 6.354a.5.5 0 11-.708-.708l3-3z" clip-rule="evenodd"></path>
