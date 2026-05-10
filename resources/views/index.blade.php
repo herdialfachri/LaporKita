@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8">
@@ -22,130 +23,116 @@
   <!-- Favicon  -->
   <link rel="icon" href="src/img/favicon.jpg">
 </head>
+
 <body class="text-gray-700 pt-9 sm:pt-10">
   <!-- ========== { HEADER }==========  -->
   <header class="fixed top-0 left-0 right-0 z-50">
-     <nav class="bg-black">
-        <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
-          <div class="flex justify-between">
-            <div class="mx-w-10 text-2xl font-bold capitalize text-white flex items-center">Tailnews</div>
-            
-            <div class="flex flex-row">
-              <!-- nav menu -->
-              <ul class="navbar hidden lg:flex lg:flex-row text-gray-400 text-sm items-center font-bold">
-                <li class="active relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Beranda</a>
-                </li>
-                <li class="dropdown relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Layanan</a>
+    <nav class="bg-black">
+      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+        <div class="flex justify-between">
+          <div class="mx-w-10 text-2xl font-bold capitalize text-white flex items-center">Tailnews</div>
 
-                  <ul class="dropdown-menu font-normal absolute left-0 right-auto top-full z-50 border-b-0 text-left bg-white text-gray-700 border border-gray-100" style="min-width: 12rem;">
-                  	<li class="subdropdown relative hover:bg-gray-50">
-                      <a class="block py-2 px-6 border-b border-gray-100" href="#">
-                        Homepage
-                      </a>
+          <div class="flex flex-row">
+            <!-- nav menu -->
+            <ul class="navbar hidden lg:flex lg:flex-row text-gray-400 text-sm items-center font-bold">
+              <li class="active relative border-l border-gray-800 hover:bg-gray-900">
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#beranda">Beranda</a>
+              </li>
+              <li class="dropdown relative border-l border-gray-800 hover:bg-gray-900">
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Layanan</a>
 
-                      <!--dropdown submenu-->
-                      <ul class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100" style="min-width: 12rem;">
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="index.html">Homepage 1</a></li>
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="index-2.html">Homepage 2</a></li>
-                      </ul>
-                    </li>
-                    <li class="subdropdown relative hover:bg-gray-50">
-                      <a class="block py-2 px-6 border-b border-gray-100" href="#">
-                        Pages
-                      </a>
+                <ul class="dropdown-menu font-normal absolute left-0 right-auto top-full z-50 border-b-0 text-left bg-white text-gray-700 border border-gray-100" style="min-width: 12rem;">
+                  <li class="subdropdown relative hover:bg-gray-50">
+                    <a class="block py-2 px-6 border-b border-gray-100" href="#">
+                      Pengajuan
+                    </a>
 
-                      <!--dropdown submenu-->
-                      <ul class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100" style="min-width: 12rem;">
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="/test">404</a></li>
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="author.html">Author</a></li>
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="category.html">Category</a></li>
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="search.html">Search</a></li>
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="page.html">Page</a></li>
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="contact-us.html">Contact</a></li>
-                      </ul>
-                    </li>
-                    <li class="subdropdown relative hover:bg-gray-50">
-                      <a class="block py-2 px-6 border-b border-gray-100" href="#">
-                        Post
-                      </a>
+                    <!--dropdown submenu-->
+                    <ul class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100" style="min-width: 12rem;">
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="index.html">Pengajuan Magang</a></li>
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="index-2.html">Pengajuan PKL</a></li>
+                    </ul>
+                  </li>
 
-                      <!--dropdown submenu-->
-                      <ul class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100" style="min-width: 12rem;">
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="single.html">Post default</a></li>
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="single-2.html">Post fullwidth</a></li>
-                      </ul>
-                    </li>
+                  <li class="subdropdown relative hover:bg-gray-50">
+                    <a class="block py-2 px-6 border-b border-gray-100" href="#">
+                      Pengaduan
+                    </a>
 
-                    <li class="subdropdown relative hover:bg-gray-50">
-                      <a class="block py-2 px-6 border-b border-gray-100" href="#">
-                        Documentation
-                      </a>
+                    <!--dropdown submenu-->
+                    <ul class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100" style="min-width: 12rem;">
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="index.html">Pengajuan Magang</a></li>
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="index-2.html">Pengajuan PKL</a></li>
+                    </ul>
+                  </li>
 
-                      <!--dropdown submenu-->
-                      <ul class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100" style="min-width: 12rem;">
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="docs/index.html">Get started</a></li>
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="docs/components.html">Components</a></li>
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="docs/credits.html">Credits</a></li>
-                        <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="docs/changelogs.html">Changelogs</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Berita</a>
-                </li>
-                <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Galeri</a>
-                </li>
-                <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">Kontak</a>
-                </li>
-                <li class="relative border-l border-gray-800 hover:bg-gray-900">
-                  <a class="block py-3 px-6 border-b-2 border-transparent" href="#">FAQ</a>
-                </li>
-              </ul>
+                  <li class="subdropdown relative hover:bg-gray-50">
+                    <a class="block py-2 px-6 border-b border-gray-100" href="#">
+                      Panduan
+                    </a>
 
-              <!-- search form & mobile nav -->
-              <div class="flex flex-row items-center text-gray-300">
-                <div class="search-dropdown relative border-r lg:border-l border-gray-800 hover:bg-gray-900">
-                  <button class="block py-3 px-6 border-b-2 border-transparent">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="open bi bi-search" viewBox="0 0 16 16">
-                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="close bi bi-x-lg" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
-                      <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
-                    </svg>
-                  </button>
-                  <div class="dropdown-menu absolute left-auto right-0 top-full z-50 text-left bg-white text-gray-700 border border-gray-100 mt-1 p-3" style="min-width: 15rem;">
-                    <div class="flex flex-wrap items-stretch w-full relative">
-                      <input type="text" class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0" name="text" placeholder="Search..." aria-label="search">
-                      <div class="flex -mr-px">
-                        <button class="flex items-center py-2 px-5 -ml-1 leading-5 text-gray-100 bg-black hover:text-white hover:bg-gray-900 hover:ring-0 focus:outline-none focus:ring-0" type="submit">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                          </svg>
-                        </button>
-                      </div>
+                    <!--dropdown submenu-->
+                    <ul class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100" style="min-width: 12rem;">
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="index.html">Cara Pengajuan</a></li>
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="index-2.html">Cara Pengaduan</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="relative border-l border-gray-800 hover:bg-gray-900">
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#informasi">Informasi</a>
+              </li>
+              <li class="relative border-l border-gray-800 hover:bg-gray-900">
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#galeri">Galeri</a>
+              </li>
+              <li class="relative border-l border-gray-800 hover:bg-gray-900">
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#berita">Berita</a>
+              </li>
+              <li class="relative border-l border-gray-800 hover:bg-gray-900">
+                <a class="block py-3 px-6 border-b-2 border-transparent" href="#footer-content">Kontak</a>
+              </li>
+            </ul>
+
+            <!-- search form & mobile nav -->
+            <div class="flex flex-row items-center text-gray-300">
+              <div class="search-dropdown relative border-r lg:border-l border-gray-800 hover:bg-gray-900">
+                <button class="block py-3 px-6 border-b-2 border-transparent">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="open bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="close bi bi-x-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                    <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+                  </svg>
+                </button>
+                <div class="dropdown-menu absolute left-auto right-0 top-full z-50 text-left bg-white text-gray-700 border border-gray-100 mt-1 p-3" style="min-width: 15rem;">
+                  <div class="flex flex-wrap items-stretch w-full relative">
+                    <input type="text" class="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0" name="text" placeholder="Search..." aria-label="search">
+                    <div class="flex -mr-px">
+                      <button class="flex items-center py-2 px-5 -ml-1 leading-5 text-gray-100 bg-black hover:text-white hover:bg-gray-900 hover:ring-0 focus:outline-none focus:ring-0" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="relative hover:bg-gray-800 block lg:hidden">
-                  <button type="button" class="menu-mobile block py-3 px-6 border-b-2 border-transparent">
-                    <span class="sr-only">Mobile menu</span>
-                    <svg class="inline-block h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg> Menu
-                  </button>
-                </div>
+              <div class="relative hover:bg-gray-800 block lg:hidden">
+                <button type="button" class="menu-mobile block py-3 px-6 border-b-2 border-transparent">
+                  <span class="sr-only">Mobile menu</span>
+                  <svg class="inline-block h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg> Menu
+                </button>
               </div>
             </div>
           </div>
         </div>
-     </nav>
+      </div>
+    </nav>
   </header><!-- end header -->
 
   <!-- Mobile menu -->
@@ -168,13 +155,13 @@
           <div class="text-center py-4 w-full font-bold border-b border-gray-100">TAILNEWS</div>
           <ul id="side-menu" class="w-full float-none flex flex-col">
             <li class="relative">
-              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Home</a>
+              <a href="#" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Beranda</a>
             </li>
 
             <!-- dropdown with submenu-->
             <li class="dropdown relative">
               <a class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50" href="javascript:;">
-                News
+                Layanan
               </a>
 
               <!-- dropdown menu -->
@@ -245,150 +232,195 @@
       </div>
     </div>
 
-<!-- ===== SLIDER FOTO ===== -->
-<div class="bg-white py-6">
-  <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
-    <div class="w-full py-3">
-      <h2 class="text-gray-800 text-2xl font-bold">
-        <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Informasi
-      </h2>
-    </div>
-    <div id="hero-slider" class="hero-slider splide">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <div class="hero-slide-item">
-              <img src="src/img/dummy/img1.jpg" alt="Slide 1">
-              <div class="hero-slide-caption">
-                <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Pengajuan</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Layanan Pengajuan Mudah & Cepat</h2>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="hero-slide-item">
-              <img src="src/img/dummy/img2.jpg" alt="Slide 2">
-              <div class="hero-slide-caption">
-                <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Pengaduan</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Sampaikan Pengaduan Anda</h2>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="hero-slide-item">
-              <img src="src/img/dummy/img3.jpg" alt="Slide 3">
-              <div class="hero-slide-caption">
-                <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Informasi</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Informasi Terkini Untuk Anda</h2>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="hero-slide-item">
-              <img src="src/img/dummy/img4.jpg" alt="Slide 4">
-              <div class="hero-slide-caption">
-                <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Panduan</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Panduan Penggunaan Layanan</h2>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="hero-slide-item">
-              <img src="src/img/dummy/img5.jpg" alt="Slide 5">
-              <div class="hero-slide-caption">
-                <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Kontak</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Hubungi Kami Kapan Saja</h2>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="slider-progress-bar">
-        <div class="slider-progress-fill"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ===== CARD LAYANAN ===== -->
-<div class="bg-white py-8">
-  <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
-    <div class="w-full py-3 mb-2">
-      <h2 class="text-gray-800 text-2xl font-bold">
-        <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Layanan Tersedia
-      </h2>
-    </div>
-    <div class="flex flex-row flex-wrap -mx-3">
-
-      <!-- Card Pengajuan -->
-      <div class="flex-shrink max-w-full w-full sm:w-1/2 px-3 mb-6">
-        <div class="service-card bg-white border border-gray-100">
-          <div class="service-card-img">
-            <img src="src/img/dummy/img6.jpg" alt="Pengajuan">
-            <span class="service-card-label">Pengajuan</span>
-          </div>
-          <div class="service-card-body">
-            <div class="flex items-center mb-3">
-              <div class="inline-block h-5 border-l-3 border-red-600 mr-3"></div>
-              <h3 class="text-xl font-bold text-gray-800">Sistem Pengajuan</h3>
-            </div>
-            <p class="text-gray-600 text-sm mb-4" style="line-height:1.6">
-              Ajukan permohonan layanan Anda secara online. Proses cepat, transparan, dan dapat dipantau secara real-time.
-            </p>
-            <ul class="service-list">
-              <li>Pengajuan izin &amp; dokumen</li>
-              <li>Permohonan surat keterangan</li>
-              <li>Tracking status pengajuan</li>
+    <!-- ===== SLIDER FOTO ===== -->
+    <div id="beranda" class="bg-white py-6">
+      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+        <div class="w-full py-3">
+          <h2 class="text-gray-800 text-2xl font-bold">
+            <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Informasi
+          </h2>
+        </div>
+        <div id="hero-slider" class="hero-slider splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="hero-slide-item">
+                  <img src="src/img/dummy/img1.jpg" alt="Slide 1">
+                  <div class="hero-slide-caption">
+                    <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Pengajuan</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Layanan Pengajuan Mudah & Cepat</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="hero-slide-item">
+                  <img src="src/img/dummy/img2.jpg" alt="Slide 2">
+                  <div class="hero-slide-caption">
+                    <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Pengaduan</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Sampaikan Pengaduan Anda</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="hero-slide-item">
+                  <img src="src/img/dummy/img3.jpg" alt="Slide 3">
+                  <div class="hero-slide-caption">
+                    <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Informasi</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Informasi Terkini Untuk Anda</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="hero-slide-item">
+                  <img src="src/img/dummy/img4.jpg" alt="Slide 4">
+                  <div class="hero-slide-caption">
+                    <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Panduan</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Panduan Penggunaan Layanan</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="hero-slide-item">
+                  <img src="src/img/dummy/img5.jpg" alt="Slide 5">
+                  <div class="hero-slide-caption">
+                    <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Kontak</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Hubungi Kami Kapan Saja</h2>
+                  </div>
+                </div>
+              </li>
             </ul>
-            <div class="service-card-footer">
-              <a href="{{ route('dashboard') }}" class="service-btn">
-    Ajukan Sekarang &rarr;
-</a>
-            </div>
+          </div>
+          <div class="slider-progress-bar">
+            <div class="slider-progress-fill"></div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Card Pengaduan -->
-      <div class="flex-shrink max-w-full w-full sm:w-1/2 px-3 mb-6">
-        <div class="service-card bg-white border border-gray-100">
-          <div class="service-card-img">
-            <img src="src/img/dummy/img7.jpg" alt="Pengaduan">
-            <span class="service-card-label">Pengaduan</span>
-          </div>
-          <div class="service-card-body">
-            <div class="flex items-center mb-3">
-              <div class="inline-block h-5 border-l-3 border-red-600 mr-3"></div>
-              <h3 class="text-xl font-bold text-gray-800">Sistem Pengaduan</h3>
-            </div>
-            <p class="text-gray-600 text-sm mb-4" style="line-height:1.6">
-              Sampaikan keluhan atau masukan Anda dengan mudah. Setiap pengaduan akan ditangani secara serius dan terukur.
-            </p>
-            <ul class="service-list">
-              <li>Laporan keluhan masyarakat</li>
-              <li>Masukan &amp; saran layanan</li>
-              <li>Tracking status pengaduan</li>
-            </ul>
-            <div class="service-card-footer">
-              <a href="{{ route('dashboard') }}" class="service-btn">Laporkan Sekarang &rarr;</a>
+    <!-- ===== STATISTIK ===== -->
+    <div class="bg-white">
+      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+        <div class="flex flex-row flex-wrap text-center">
+
+          <div class="flex-shrink max-w-full w-full sm:w-1/3">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                </svg>
+              </div>
+              <span class="stat-number" data-target="100">0</span>
+              <span class="stat-label">Pengaduan Selesai</span>
             </div>
           </div>
+
+          <div class="flex-shrink max-w-full w-full sm:w-1/3 stat-item--border">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <span class="stat-number" data-target="50">0</span>
+              <span class="stat-label">Pengajuan Selesai</span>
+            </div>
+          </div>
+
+          <div class="flex-shrink max-w-full w-full sm:w-1/3">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <span class="stat-number" data-target="200">0</span>
+              <span class="stat-label">Pengguna Aktif</span>
+            </div>
+          </div>
+
         </div>
       </div>
-
     </div>
-  </div>
-</div>
+
+    <!-- ===== CARD LAYANAN ===== -->
+    <div class="bg-white py-8">
+      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+        <div class="w-full py-3 mb-2">
+          <h2 class="text-gray-800 text-2xl font-bold">
+            <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Layanan Tersedia
+          </h2>
+        </div>
+        <div class="flex flex-row flex-wrap -mx-3">
+
+          <!-- Card Pengajuan -->
+          <div class="flex-shrink max-w-full w-full sm:w-1/2 px-3 mb-6">
+            <div class="service-card bg-white border border-gray-100">
+              <div class="service-card-img">
+                <img src="src/img/dummy/img6.jpg" alt="Pengajuan">
+                <span class="service-card-label">Pengajuan</span>
+              </div>
+              <div class="service-card-body">
+                <div class="flex items-center mb-3">
+                  <div class="inline-block h-5 border-l-3 border-red-600 mr-3"></div>
+                  <h3 class="text-lg font-bold leading-tight text-gray-800">Sistem Pengajuan</h3>
+                </div>
+                <p class="text-gray-600 leading-tight mb-4">
+                  Ajukan permohonan layanan Anda secara online. Proses cepat, transparan, dan dapat dipantau secara real-time.
+                </p>
+                <ul class="service-list">
+                  <li>Pengajuan izin &amp; dokumen</li>
+                  <li>Permohonan surat keterangan</li>
+                  <li>Tracking status pengajuan</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="{{ route('dashboard') }}" class="service-btn">
+                    Ajukan Sekarang &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Pengaduan -->
+          <div class="flex-shrink max-w-full w-full sm:w-1/2 px-3 mb-6">
+            <div class="service-card bg-white border border-gray-100">
+              <div class="service-card-img">
+                <img src="src/img/dummy/img7.jpg" alt="Pengaduan">
+                <span class="service-card-label">Pengaduan</span>
+              </div>
+              <div class="service-card-body">
+                <div class="flex items-center mb-3">
+                  <div class="inline-block h-5 border-l-3 border-red-600 mr-3"></div>
+                  <h3 class="text-lg font-bold leading-tight text-gray-800">Sistem Pengaduan</h3>
+                </div>
+                <p class="text-gray-600 leading-tight mb-4">
+                  Sampaikan keluhan atau masukan Anda dengan mudah. Setiap pengaduan akan ditangani secara serius dan terukur.
+                </p>
+                <ul class="service-list">
+                  <li>Laporan keluhan masyarakat</li>
+                  <li>Masukan &amp; saran layanan</li>
+                  <li>Tracking status pengaduan</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="{{ route('dashboard') }}" class="service-btn">Laporkan Sekarang &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
     <!-- block news -->
-    <div class="bg-white">
+    <div id="informasi" class="bg-white">
       <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
         <div class="flex flex-row flex-wrap">
           <!-- Left -->
           <div class="flex-shrink max-w-full w-full lg:w-2/3 overflow-hidden">
             <div class="w-full py-3">
               <h2 class="text-gray-800 text-2xl font-bold">
-                <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Berita Terbaru
+                <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Informasi Terbaru
               </h2>
             </div>
             <div class="flex flex-row flex-wrap -mx-3">
@@ -496,7 +528,7 @@
     </div>
 
     <!-- slider news -->
-    <div class="relative bg-gray-50" style="background-image: url('src/img/bg.jpg');background-size: cover;background-position: center center;background-attachment: fixed">
+    <div id="galeri" class="relative bg-gray-50" style="background-image: url('src/img/bg.jpg');background-size: cover;background-position: center center;background-attachment: fixed">
       <div class="bg-black bg-opacity-70">
         <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
           <div class="flex flex-row flex-wrap">
@@ -609,7 +641,7 @@
     </div>
 
     <!-- block news -->
-    <div class="bg-gray-50 py-6">
+    <div id="berita" class="bg-gray-50 py-6">
       <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
         <div class="flex flex-row flex-wrap">
           <!-- post -->
@@ -631,10 +663,12 @@
                     <a href="#">
                       <h2 class="text-3xl font-bold capitalize text-white mb-3">Amazon Shoppers Are Ditching Designer Belts for This Best-Selling</h2>
                     </a>
-                    <p class="text-gray-100 hidden sm:inline-block">This is a wider card with supporting text below as a natural lead-in to additional content. This very helpfull for generate default content..</p>                                                  
+                    <p class="text-gray-100 hidden sm:inline-block">This is a wider card with supporting text below as a natural lead-in to additional content. This very helpfull for generate default content..</p>
                     <!-- author and date -->
                     <div class="pt-2">
-                      <div class="text-gray-100"><div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>Europe</div>
+                      <div class="text-gray-100">
+                        <div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>Europe
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -766,6 +800,81 @@
       </div>
     </div>
 
+    <!-- ===== FAQ ===== -->
+    <div id="faq" class="bg-gray-50 py-6">
+      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+        <div class="w-full mb-8" style="max-width: 1000px; margin: 0 auto 2rem auto;">
+          <h2 class="text-gray-800 text-2xl font-bold">
+            <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Pertanyaan Umum
+          </h2>
+        </div>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Bagaimana cara mengajukan permohonan layanan?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Anda dapat mengajukan permohonan melalui menu Layanan &rarr; Pengajuan. Isi formulir yang tersedia, lampirkan dokumen yang diperlukan, lalu klik tombol Ajukan. Status pengajuan dapat dipantau secara real-time di halaman dashboard Anda.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Berapa lama waktu proses pengajuan?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Waktu proses pengajuan umumnya berlangsung antara 3 hingga 7 hari kerja tergantung jenis layanan yang diajukan. Anda akan mendapatkan notifikasi melalui email atau nomor telepon yang terdaftar ketika status pengajuan berubah.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Bagaimana cara menyampaikan pengaduan?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Pengaduan dapat disampaikan melalui menu Layanan &rarr; Pengaduan. Ceritakan keluhan Anda secara lengkap dan jelas, sertakan bukti pendukung jika ada. Tim kami akan menindaklanjuti setiap pengaduan dalam waktu maksimal 2x24 jam hari kerja.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Apakah saya perlu membuat akun untuk menggunakan layanan?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Ya, Anda perlu mendaftarkan akun terlebih dahulu untuk dapat menggunakan layanan pengajuan dan pengaduan. Pendaftaran gratis dan hanya membutuhkan NIK, nama lengkap, email, serta nomor telepon yang aktif.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Bagaimana cara memantau status pengajuan saya?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Setelah login, masuk ke halaman Dashboard lalu pilih menu Riwayat Pengajuan. Di sana Anda dapat melihat status terkini dari semua pengajuan yang pernah dibuat beserta riwayat perubahannya secara lengkap.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
   </main><!-- end main -->
 
   <!-- =========={ FOOTER }==========  -->
@@ -785,28 +894,38 @@
               <li class="inline-block">
                 <a class="hover:text-gray-100" rel="noopener noreferrer" href="#!" title="Facebook">
                   <!-- <i class="fab fa-facebook fa-2x"></i> -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512"><path fill="currentColor" d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512">
+                    <path fill="currentColor" d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path>
+                  </svg>
                 </a>
               </li>
               <!--twitter-->
               <li class="inline-block">
                 <a class="hover:text-gray-100" rel="noopener noreferrer" href="#!" title="Twitter">
                   <!-- <i class="fab fa-twitter fa-2x"></i> -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512"><path fill="currentColor" d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512">
+                    <path fill="currentColor" d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"></path>
+                  </svg>
                 </a>
               </li>
               <!--youtube-->
               <li class="inline-block">
                 <a class="hover:text-gray-100" rel="noopener noreferrer" href="#!" title="Youtube">
                   <!-- <i class="fab fa-youtube fa-2x"></i> -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512"><path fill="currentColor" d="M508.64,148.79c0-45-33.1-81.2-74-81.2C379.24,65,322.74,64,265,64H247c-57.6,0-114.2,1-169.6,3.6-40.8,0-73.9,36.4-73.9,81.4C1,184.59-.06,220.19,0,255.79q-.15,53.4,3.4,106.9c0,45,33.1,81.5,73.9,81.5,58.2,2.7,117.9,3.9,178.6,3.8q91.2.3,178.6-3.8c40.9,0,74-36.5,74-81.5,2.4-35.7,3.5-71.3,3.4-107Q512.24,202.29,508.64,148.79ZM207,353.89V157.39l145,98.2Z"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512">
+                    <path fill="currentColor" d="M508.64,148.79c0-45-33.1-81.2-74-81.2C379.24,65,322.74,64,265,64H247c-57.6,0-114.2,1-169.6,3.6-40.8,0-73.9,36.4-73.9,81.4C1,184.59-.06,220.19,0,255.79q-.15,53.4,3.4,106.9c0,45,33.1,81.5,73.9,81.5,58.2,2.7,117.9,3.9,178.6,3.8q91.2.3,178.6-3.8c40.9,0,74-36.5,74-81.5,2.4-35.7,3.5-71.3,3.4-107Q512.24,202.29,508.64,148.79ZM207,353.89V157.39l145,98.2Z"></path>
+                  </svg>
                 </a>
               </li>
               <!--instagram-->
               <li class="inline-block">
                 <a class="hover:text-gray-100" rel="noopener noreferrer" href="#!" title="Instagram">
                   <!-- <i class="fab fa-instagram fa-2x"></i> -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512"><path fill="currentColor" d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"></path><path fill="currentColor" d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"></path><path fill="currentColor" d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512">
+                    <path fill="currentColor" d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"></path>
+                    <path fill="currentColor" d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"></path>
+                    <path fill="currentColor" d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"></path>
+                  </svg>
                 </a>
               </li><!--end instagram-->
             </ul>
@@ -861,7 +980,7 @@
       <div class="py-4 border-t border-gray-200 border-opacity-10">
         <div class="row">
           <div class="col-12 col-md text-center">
-            <p class="d-block my-3 text-center">All rights reserved by <a href="https://aribudin.gumroad.com/" target="_blank"class="font-bold text-white">Ari Budin</a> • Distributed by <a href="https://themewagon.com/" target="_blank"class="font-bold text-white">ThemeWagon</a></p>
+            <p class="d-block my-3 text-center">All rights reserved by <a href="https://aribudin.gumroad.com/" target="_blank" class="font-bold text-white">Ari Budin</a> • Distributed by <a href="https://themewagon.com/" target="_blank" class="font-bold text-white">ThemeWagon</a></p>
           </div>
         </div>
       </div>
@@ -881,7 +1000,7 @@
   <script src="src/vendors/glightbox/dist/js/glightbox.min.js"></script>
   <script src="src/vendors/@splidejs/splide/dist/js/splide.min.js"></script>
   <script src="src/vendors/@splidejs/splide-extension-video/dist/js/splide-extension-video.min.js"></script>
-  
+
   <!-- Start development js -->
   <script src="src/js/theme.js"></script>
   <!-- End development js -->
@@ -889,4 +1008,5 @@
   <!-- Production js -->
   <!-- <script src="dist/js/scripts.js"></script> -->
 </body>
+
 </html>

@@ -360,7 +360,115 @@
 
     // Custom JS
     const myCustom = function () {
-        // insert your javascript in here
+        // Smooth scroll dengan offset navbar
+        const navLinks = document.querySelectorAll(
+            'a[href^="#"]:not(.back-top)',
+        );
+        if (navLinks.length > 0) {
+            navLinks.forEach(function (link) {
+                link.addEventListener("click", function (e) {
+                    const href = this.getAttribute("href");
+                    if (href === "#") return;
+                    const target = document.querySelector(href);
+                    if (!target) return;
+                    e.preventDefault();
+                    const navHeight =
+                        document.querySelector("header").offsetHeight;
+                    const targetPos =
+                        target.getBoundingClientRect().top +
+                        window.scrollY -
+                        navHeight -
+                        8;
+                    window.scrollTo({ top: targetPos, behavior: "smooth" });
+                });
+            });
+        }
+
+        // Counter statistik
+        const statNumbers = document.querySelectorAll(".stat-number");
+        if (statNumbers.length > 0) {
+            const animateCount = function (el) {
+                const target = parseInt(el.getAttribute("data-target"));
+                const duration = 1800;
+                const steps = 60;
+                const increment = target / steps;
+                let current = 0;
+                let count = 0;
+                const timer = setInterval(function () {
+                    count++;
+                    current += increment;
+                    if (count >= steps) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    el.textContent =
+                        Math.floor(current).toLocaleString("id-ID");
+                }, duration / steps);
+            };
+
+            const observer = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            animateCount(entry.target);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.5 },
+            );
+
+            statNumbers.forEach(function (el) {
+                observer.observe(el);
+            });
+        }
+
+        // FAQ toggle
+        window.toggleFaq = function (btn) {
+            const item = btn.closest(".faq-item");
+            const isOpen = item.classList.contains("open");
+            document.querySelectorAll(".faq-item.open").forEach(function (el) {
+                el.classList.remove("open");
+            });
+            if (!isOpen) {
+                item.classList.add("open");
+            }
+        };
+
+        // Active navbar berdasarkan scroll
+        const sections = document.querySelectorAll(
+            "#beranda, #informasi, #galeri, #berita, #footer-content",
+        );
+        const navItems = document.querySelectorAll(".navbar a");
+
+        if (sections.length > 0 && navItems.length > 0) {
+            window.addEventListener("scroll", function () {
+                let current = "";
+                const navHeight = document.querySelector("header").offsetHeight;
+                const scrollBottom = window.scrollY + window.innerHeight;
+                const docHeight = document.documentElement.scrollHeight;
+
+                // kalau udah di bottom page, aktifkan section terakhir
+                if (scrollBottom >= docHeight - 10) {
+                    current = sections[sections.length - 1].getAttribute("id");
+                } else {
+                    sections.forEach(function (section) {
+                        const sectionTop = section.offsetTop - navHeight - 50;
+                        if (window.scrollY >= sectionTop) {
+                            current = section.getAttribute("id");
+                        }
+                    });
+                }
+
+                navItems.forEach(function (a) {
+                    a.parentElement.classList.remove("active");
+                    const href = a.getAttribute("href");
+                    if (href === "#" + current) {
+                        a.parentElement.classList.add("active");
+                    }
+                });
+            });
+        }
     };
 
     /**
