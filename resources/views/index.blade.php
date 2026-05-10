@@ -12,7 +12,7 @@
   <meta name="description" content="Tailwind CSS News Template">
 
   <!-- Development css -->
-  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="assets/landing_page/src/css/style.css">
 
   <!-- Production css -->
   <!-- <link rel="stylesheet" href="dist/css/style.css"> -->
@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
 
   <!-- Favicon  -->
-  <link rel="icon" href="src/img/favicon.jpg">
+  <link rel="icon" href="assets/landing_page/src/img/favicon.jpg">
 </head>
 
 <body class="text-gray-700 pt-9 sm:pt-10">
@@ -244,7 +244,7 @@
         <div class="mx-auto table text-center text-sm">
           <a class="uppercase" href="#">Advertisement</a>
           <a href="#">
-            <img src="src/img/ads/ads_728.jpg" alt="advertisement area">
+            <img src="assets/landing_page/src/img/ads/ads_728.jpg" alt="advertisement area">
           </a>
         </div>
       </div>
@@ -263,7 +263,7 @@
             <ul class="splide__list">
               <li class="splide__slide">
                 <div class="hero-slide-item">
-                  <img src="src/img/dummy/img1.jpg" alt="Slide 1">
+                  <img src="assets/landing_page/src/img/dummy/img1.jpg" alt="Slide 1">
                   <div class="hero-slide-caption">
                     <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Pengajuan</span>
                     <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Layanan Pengajuan Mudah & Cepat</h2>
@@ -272,7 +272,7 @@
               </li>
               <li class="splide__slide">
                 <div class="hero-slide-item">
-                  <img src="src/img/dummy/img2.jpg" alt="Slide 2">
+                  <img src="assets/landing_page/src/img/dummy/img2.jpg" alt="Slide 2">
                   <div class="hero-slide-caption">
                     <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Pengaduan</span>
                     <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Sampaikan Pengaduan Anda</h2>
@@ -281,7 +281,7 @@
               </li>
               <li class="splide__slide">
                 <div class="hero-slide-item">
-                  <img src="src/img/dummy/img3.jpg" alt="Slide 3">
+                  <img src="assets/landing_page/src/img/dummy/img3.jpg" alt="Slide 3">
                   <div class="hero-slide-caption">
                     <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Informasi</span>
                     <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Informasi Terkini Untuk Anda</h2>
@@ -290,7 +290,7 @@
               </li>
               <li class="splide__slide">
                 <div class="hero-slide-item">
-                  <img src="src/img/dummy/img4.jpg" alt="Slide 4">
+                  <img src="assets/landing_page/src/img/dummy/img4.jpg" alt="Slide 4">
                   <div class="hero-slide-caption">
                     <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Panduan</span>
                     <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Panduan Penggunaan Layanan</h2>
@@ -299,7 +299,7 @@
               </li>
               <li class="splide__slide">
                 <div class="hero-slide-item">
-                  <img src="src/img/dummy/img5.jpg" alt="Slide 5">
+                  <img src="assets/landing_page/src/img/dummy/img5.jpg" alt="Slide 5">
                   <div class="hero-slide-caption">
                     <span class="hero-slide-tag"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Kontak</span>
                     <h2 class="text-2xl sm:text-3xl font-bold text-white capitalize mb-2">Hubungi Kami Kapan Saja</h2>
@@ -374,7 +374,7 @@
           <div class="flex-shrink max-w-full w-full sm:w-1/2 px-3 mb-6">
             <div class="service-card bg-white border border-gray-100">
               <div class="service-card-img">
-                <img src="src/img/dummy/img6.jpg" alt="Pengajuan">
+                <img src="assets/landing_page/src/img/dummy/img6.jpg" alt="Pengajuan">
                 <span class="service-card-label">Pengajuan</span>
               </div>
               <div class="service-card-body">
@@ -403,7 +403,7 @@
           <div class="flex-shrink max-w-full w-full sm:w-1/2 px-3 mb-6">
             <div class="service-card bg-white border border-gray-100">
               <div class="service-card-img">
-                <img src="src/img/dummy/img7.jpg" alt="Pengaduan">
+                <img src="assets/landing_page/src/img/dummy/img7.jpg" alt="Pengaduan">
                 <span class="service-card-label">Pengaduan</span>
               </div>
               <div class="service-card-body">
@@ -445,7 +445,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img6.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img6.jpg" alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -459,7 +459,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img7.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img7.jpg" alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -473,7 +473,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img8.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img8.jpg" alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -487,7 +487,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img9.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img9.jpg" alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -501,7 +501,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img10.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img10.jpg" alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -515,7 +515,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img11.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img11.jpg" alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -535,7 +535,7 @@
                 <div class="w-full text-center">
                   <a class="uppercase" href="#">Advertisement</a>
                   <a href="#">
-                    <img class="mx-auto" src="src/img/ads/250.jpg" alt="advertisement area">
+                    <img class="mx-auto" src="assets/landing_page/src/img/ads/250.jpg" alt="advertisement area">
                   </a>
                 </div>
               </div>
@@ -563,7 +563,7 @@
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
                           <a href="">
-                            <img class="max-w-full w-full mx-auto" src="src/img/dummy/img14.jpg" alt="alt title">
+                            <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img14.jpg" alt="alt title">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
@@ -578,7 +578,7 @@
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
                           <a href="">
-                            <img class="max-w-full w-full mx-auto" src="src/img/dummy/img15.jpg" alt="alt title">
+                            <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img15.jpg" alt="alt title">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
@@ -593,7 +593,7 @@
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
                           <a href="">
-                            <img class="max-w-full w-full mx-auto" src="src/img/dummy/img16.jpg" alt="alt title">
+                            <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img16.jpg" alt="alt title">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
@@ -608,7 +608,7 @@
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
                           <a href="">
-                            <img class="max-w-full w-full mx-auto" src="src/img/dummy/img17.jpg" alt="alt title">
+                            <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img17.jpg" alt="alt title">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
@@ -623,7 +623,7 @@
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
                           <a href="">
-                            <img class="max-w-full w-full mx-auto" src="src/img/dummy/img18.jpg" alt="alt title">
+                            <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img18.jpg" alt="alt title">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
@@ -638,7 +638,7 @@
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
                           <a href="">
-                            <img class="max-w-full w-full mx-auto" src="src/img/dummy/img1.jpg" alt="alt title">
+                            <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img1.jpg" alt="alt title">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
@@ -674,7 +674,7 @@
                 <div class="relative hover-img max-h-98 overflow-hidden">
                   <!--thumbnail-->
                   <a href="#">
-                    <img class="max-w-full w-full mx-auto h-auto" src="src/img/dummy/img15.jpg" alt="Image description">
+                    <img class="max-w-full w-full mx-auto h-auto" src="assets/landing_page/src/img/dummy/img15.jpg" alt="Image description">
                   </a>
                   <div class="absolute px-5 pt-8 pb-5 bottom-0 w-full bg-gradient-cover">
                     <!--title-->
@@ -695,7 +695,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img24.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img24.jpg" alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -709,7 +709,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img7.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img7.jpg" alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -723,7 +723,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img17.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img17.jpg" alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -737,7 +737,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img25.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img25.jpg" alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -751,7 +751,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img12.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img12.jpg" alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -765,7 +765,7 @@
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
                   <a href="">
-                    <img class="max-w-full w-full mx-auto" src="src/img/dummy/img8.jpg" alt="alt title">
+                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img8.jpg" alt="alt title">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
@@ -809,7 +809,7 @@
               <div class="w-full text-center">
                 <a class="uppercase" href="#">Advertisement</a>
                 <a href="#">
-                  <img class="mx-auto" src="src/img/ads/250.jpg" alt="advertisement area">
+                  <img class="mx-auto" src="assets/landing_page/src/img/ads/250.jpg" alt="advertisement area">
                 </a>
               </div>
             </div>
@@ -904,7 +904,7 @@
           <div class="flex-shrink max-w-full w-full lg:w-2/5 px-3 lg:pr-16">
             <div class="flex items-center mb-2">
               <span class="text-3xl leading-normal mb-2 font-bold text-gray-100 mt-2">TailNews</span>
-              <!-- <img src="src/img-min/logo.png" alt="LOGO"> -->
+              <!-- <img src="assets/landing_page/src/img-min/logo.png" alt="LOGO"> -->
             </div>
             <p>Tailwind News Template for build great newspapper, magazine and news portal.</p>
             <ul class="space-x-3 mt-6 mb-6 Lg:mb-0">
@@ -1014,13 +1014,13 @@
   </a>
 
   <!--Vendor js-->
-  <script src="src/vendors/hc-sticky/dist/hc-sticky.js"></script>
-  <script src="src/vendors/glightbox/dist/js/glightbox.min.js"></script>
-  <script src="src/vendors/@splidejs/splide/dist/js/splide.min.js"></script>
-  <script src="src/vendors/@splidejs/splide-extension-video/dist/js/splide-extension-video.min.js"></script>
+  <script src="assets/landing_page/src/vendors/hc-sticky/dist/hc-sticky.js"></script>
+  <script src="assets/landing_page/src/vendors/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="assets/landing_page/src/vendors/@splidejs/splide/dist/js/splide.min.js"></script>
+  <script src="assets/landing_page/src/vendors/@splidejs/splide-extension-video/dist/js/splide-extension-video.min.js"></script>
 
   <!-- Start development js -->
-  <script src="src/js/theme.js"></script>
+  <script src="assets/landing_page/src/js/theme.js"></script>
   <!-- End development js -->
 
   <!-- Production js -->
