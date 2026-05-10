@@ -74,11 +74,28 @@
 
                     <!--dropdown submenu-->
                     <ul class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100" style="min-width: 12rem;">
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="index.html">Cara Pengajuan</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="index-2.html">Cara Pengaduan</a></li>
-                    </ul>
-                  </li>
 
+                      <li class="relative hover:bg-gray-50">
+                        <a
+                          class="block py-2 px-6 border-b border-gray-100"
+                          href="{{ asset('files/panduan/panduan-1.jpg') }}"
+                          download>
+                          Cara Pengajuan
+                        </a>
+                      </li>
+
+                      <li class="relative hover:bg-gray-50">
+                        <a
+                          class="block py-2 px-6 border-b border-gray-100"
+                          href="{{ asset('files/panduan/panduan-2.jpg') }}"
+                          download>
+                          Cara Pengaduan
+                        </a>
+                      </li>
+
+                    </ul>
+
+                  </li>
                 </ul>
               </li>
               <li class="relative border-l border-gray-800 hover:bg-gray-900">
