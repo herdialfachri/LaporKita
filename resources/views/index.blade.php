@@ -49,9 +49,9 @@
 
                     <!--dropdown submenu-->
                     <ul class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100" style="min-width: 12rem;">
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard') }}">Pengajuan Magang</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard') }}">Pengajuan PKL</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard') }}">Pengajuan Penelitian</a></li>
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard.submissions') }}">Pengajuan Magang</a></li>
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard.submissions') }}">Pengajuan PKL</a></li>
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard.submissions') }}">Pengajuan Penelitian</a></li>
                     </ul>
                   </li>
 
@@ -62,8 +62,8 @@
 
                     <!--dropdown submenu-->
                     <ul class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100" style="min-width: 12rem;">
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard') }}">Pengaduan Pelayanan</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard') }}">Pengaduan Sistem</a></li>
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard.complaints') }}">Pengaduan Pelayanan</a></li>
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard.complaints') }}">Pengaduan Sistem</a></li>
                     </ul>
                   </li>
 
@@ -391,7 +391,7 @@
                   <li>Tracking status pengajuan</li>
                 </ul>
                 <div class="service-card-footer">
-                  <a href="{{ route('dashboard') }}" class="service-btn">
+                  <a href="{{ route('dashboard.submissions') }}" class="service-btn">
                     Ajukan Sekarang &rarr;
                   </a>
                 </div>
@@ -420,7 +420,7 @@
                   <li>Tracking status pengaduan</li>
                 </ul>
                 <div class="service-card-footer">
-                  <a href="{{ route('dashboard') }}" class="service-btn">Laporkan Sekarang &rarr;</a>
+                  <a href="{{ route('dashboard.complaints') }}" class="service-btn">Laporkan Sekarang &rarr;</a>
                 </div>
               </div>
             </div>

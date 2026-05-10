@@ -1,0 +1,98 @@
+<x-layout>
+
+  <x-slot:breadcrumb>
+    <li>Dashboard</li>
+    <li>Pengajuan</li>
+    </x-slot>
+
+    <div class="card mb-6">
+      <header class="card-header">
+        <p class="card-header-title">
+          <span class="icon"><i class="mdi mdi-ballot"></i></span>
+          Forms
+        </p>
+      </header>
+      <div class="card-content">
+        <form method="get">
+          <div class="field">
+            <label class="label">From</label>
+            <div class="field-body">
+              <div class="field">
+                <div class="control icons-left">
+                  <input class="input" type="text" placeholder="Name">
+                  <span class="icon left"><i class="mdi mdi-account"></i></span>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control icons-left icons-right">
+                  <input class="input" type="email" placeholder="Email" value="alex@smith.com">
+                  <span class="icon left"><i class="mdi mdi-mail"></i></span>
+                  <span class="icon right"><i class="mdi mdi-check"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field-body">
+              <div class="field">
+                <div class="field addons">
+                  <div class="control">
+                    <input class="input" value="+44" size="3" readonly>
+                  </div>
+                  <div class="control expanded">
+                    <input class="input" type="tel" placeholder="Your phone number">
+                  </div>
+                </div>
+                <p class="help">Do not enter the first zero</p>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Department</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>Business development</option>
+                  <option>Marketing</option>
+                  <option>Sales</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="field">
+            <label class="label">Subject</label>
+
+            <div class="control">
+              <input class="input" type="text" placeholder="e.g. Partnership opportunity">
+            </div>
+            <p class="help">
+              This field is required
+            </p>
+          </div>
+
+          <div class="field">
+            <label class="label">Question</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+            </div>
+          </div>
+          <hr>
+
+          <div class="field grouped">
+            <div class="control">
+              <button type="submit" class="button green">
+                Submit
+              </button>
+            </div>
+            <div class="control">
+              <button type="reset" class="button red">
+                Reset
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+</x-layout>

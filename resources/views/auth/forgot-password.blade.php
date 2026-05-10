@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Lupa Password | LaporKita</title>
-    <link rel="stylesheet" href="{{ asset('src/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/landing_page/src/css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="{{ asset('src/img/favicon.jpg') }}">
+    <link rel="icon" href="{{ asset('assets/landing_page/src/img/favicon.jpg') }}">
 </head>
 
 <body class="text-gray-700" style="background: #f8f8f8; min-height: 100vh; display: flex; flex-direction: column;">
