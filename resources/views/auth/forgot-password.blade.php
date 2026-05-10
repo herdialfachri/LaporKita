@@ -1,25 +1,91 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-    </div>
+<!DOCTYPE html>
+<html lang="id">
 
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lupa Password | LaporKita</title>
+    <link rel="stylesheet" href="{{ asset('src/css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ asset('src/img/favicon.jpg') }}">
+</head>
 
-    <form method="POST" action="{{ route('password.email') }}">
-        @csrf
+<body class="text-gray-700" style="background: #f8f8f8; min-height: 100vh; display: flex; flex-direction: column;">
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+    <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 3rem 1rem;">
+        <div style="width: 100%; max-width: 420px;">
+
+            <div style="background: #fff; border: 1px solid #efefef;">
+
+                <!-- Card Header -->
+                <div style="background: #f8f8f8; padding: 1.5rem; text-align: center; border-bottom: 1px solid #efefef;">
+                    <h1 style="color: #1c1c1c; font-size: 1.25rem; font-weight: 700; margin: 0;">Lupa Password</h1>
+                    <p style="color: #7d7d7d; font-size: 0.8rem; margin-top: 0.3rem;">Masukkan email Anda untuk menerima link reset password</p>
+                </div>
+
+                <!-- Card Body -->
+                <div style="padding: 2rem;">
+
+                    {{-- Session Status --}}
+                    @if (session('status'))
+                    <div style="background: #f0fdf4; border-left: 3px solid #16a34a; padding: 0.75rem 1rem; margin-bottom: 1rem; font-size: 0.85rem; color: #16a34a;">
+                        {{ session('status') }}
+                    </div>
+                    @endif
+
+                    {{-- Error --}}
+                    @if ($errors->any())
+                    <div style="background: #fef2f2; border-left: 3px solid #dc2626; padding: 0.75rem 1rem; margin-bottom: 1rem; font-size: 0.85rem; color: #dc2626;">
+                        @foreach ($errors->all() as $error)
+                        <div>{{ $error }}</div>
+                        @endforeach
+                    </div>
+                    @endif
+
+                    <form method="POST" action="{{ route('password.email') }}">
+                        @csrf
+
+                        <!-- Email -->
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="email" style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #1c1c1c; margin-bottom: 0.4rem;">
+                                Email
+                            </label>
+                            <input
+                                id="email"
+                                type="email"
+                                name="email"
+                                value="{{ old('email') }}"
+                                required
+                                autofocus
+                                style="width: 100%; padding: 0.6rem 0.875rem; border: 1px solid #e0e0e0; font-size: 0.875rem; font-family: Roboto, sans-serif; color: #1c1c1c; outline: none; box-sizing: border-box;"
+                                onfocus="this.style.borderColor='#dc2626'"
+                                onblur="this.style.borderColor='#e0e0e0'"
+                                placeholder="email@contoh.com">
+                        </div>
+
+                        <!-- Submit -->
+                        <button
+                            type="submit"
+                            style="width: 100%; background: #dc2626; color: #fff; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.75rem; border: none; cursor: pointer; font-family: Roboto, sans-serif;"
+                            onmouseover="this.style.background='#b91c1c'"
+                            onmouseout="this.style.background='#dc2626'">
+                            Kirim Link Reset &rarr;
+                        </button>
+
+                    </form>
+                </div>
+
+                <!-- Card Footer -->
+                <div style="padding: 1rem 2rem; border-top: 1px solid #efefef; text-align: center; font-size: 0.8rem; color: #7d7d7d;">
+                    Ingat password?
+                    <a href="{{ route('login') }}" style="color: #dc2626; font-weight: 700; text-decoration: none;">Masuk sekarang</a>
+                </div>
+
+            </div>
+
         </div>
+    </main>
 
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+</body>
+
+</html>
