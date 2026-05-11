@@ -67,9 +67,10 @@
                     <div class="navbar-item dropdown has-divider has-user-avatar">
                         <a class="navbar-link">
                             <div class="user-avatar">
-                                <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe" class="rounded-full">
+                                <img src="https://ui-avatars.com/api/?name={{ urlencode(auth()->user()->name) }}&background=random&color=fff&rounded=true"
+                                    alt="{{ auth()->user()->name }}">
                             </div>
-                            <div class="is-user-name"><span>John Doe</span></div>
+                            <div class="is-user-name"><span>Hi, {{ auth()->user()->name }}</span></div>
                             <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
                         </a>
                         <div class="navbar-dropdown">
