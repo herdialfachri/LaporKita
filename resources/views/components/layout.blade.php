@@ -136,7 +136,7 @@
                     <li>
                         <a href="{{ route('home') }}">
                             <span class="icon"><i class="mdi mdi-home"></i></span>
-                            <span class="menu-item-label">Kembali</span>
+                            <span class="menu-item-label">Beranda</span>
                         </a>
                     </li>
                     <li>
@@ -144,7 +144,7 @@
                             @csrf
                             <a href="#" onclick="event.preventDefault(); this.closest('form').submit();">
                                 <span class="icon"><i class="mdi mdi-logout"></i></span>
-                                <span class="menu-item-label">Logout</span>
+                                <span class="menu-item-label">Keluar</span>
                             </a>
                         </form>
                     </li>
