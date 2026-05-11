@@ -7,29 +7,46 @@ Route::get('/', function () {
     return view('index');
 })->name('home');
 
-Route::middleware(['auth', 'verified'])
+// User
+Route::middleware(['auth', 'verified', 'role:user'])
     ->prefix('dashboard')
     ->name('dashboard.')
     ->group(function () {
-
         Route::get('/', function () {
-            return view('dashboard.dashboard');
+            return view('user.dashboard');
         })->name('index');
 
-        // Pengajuan
         Route::get('/submissions', function () {
-            return view('dashboard.submissions');
+            return view('user.submissions');
         })->name('submissions');
 
-        // Pengaduan
         Route::get('/complaints', function () {
-            return view('dashboard.complaints');
+            return view('user.complaints');
         })->name('complaints');
 
-        // Profil
         Route::get('/profile', function () {
-            return view('dashboard.profile');
+            return view('user.profile');
         })->name('profile');
+    });
+
+// Admin
+Route::middleware(['auth', 'verified', 'role:admin'])
+    ->prefix('dashboard/admin')
+    ->name('admin.')
+    ->group(function () {
+        Route::get('/', function () {
+            return view('admin.dashboard');
+        })->name('dashboard');
+    });
+
+// Staff
+Route::middleware(['auth', 'verified', 'role:staff'])
+    ->prefix('dashboard/staff')
+    ->name('staff.')
+    ->group(function () {
+        Route::get('/', function () {
+            return view('staff.dashboard');
+        })->name('dashboard');
     });
 
 Route::middleware('auth')->group(function () {
