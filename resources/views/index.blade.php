@@ -1,3 +1,14 @@
+@php
+$role = auth()->check() ? auth()->user()->role : null;
+$dashboardRoute = match($role) {
+'admin' => route('admin.dashboard'),
+'staff' => route('staff.dashboard'),
+default => route('dashboard.index'),
+};
+$submissionsRoute = $role === 'user' ? route('dashboard.submissions') : $dashboardRoute;
+$complaintsRoute = $role === 'user' ? route('dashboard.complaints') : $dashboardRoute;
+@endphp
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,9 +60,9 @@
 
                     <!--dropdown submenu-->
                     <ul class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100" style="min-width: 12rem;">
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard.submissions') }}">Pengajuan Magang</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard.submissions') }}">Pengajuan PKL</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard.submissions') }}">Pengajuan Penelitian</a></li>
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ $submissionsRoute }}">Pengajuan Magang</a></li>
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ $submissionsRoute }}">Pengajuan PKL</a></li>
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ $submissionsRoute }}">Pengajuan Penelitian</a></li>
                     </ul>
                   </li>
 
@@ -62,8 +73,8 @@
 
                     <!--dropdown submenu-->
                     <ul class="dropdown-menu absolute left-full right-auto transform top-full z-50 border-b-0 text-left -mt-10 ml-0 mr-0 bg-white border border-gray-100" style="min-width: 12rem;">
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard.complaints') }}">Pengaduan Pelayanan</a></li>
-                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ route('dashboard.complaints') }}">Pengaduan Sistem</a></li>
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ $complaintsRoute }}">Pengaduan Pelayanan</a></li>
+                      <li class="relative hover:bg-gray-50"><a class="block py-2 px-6 border-b border-gray-100" href="{{ $complaintsRoute }}">Pengaduan Sistem</a></li>
                     </ul>
                   </li>
 
@@ -391,7 +402,7 @@
                   <li>Tracking status pengajuan</li>
                 </ul>
                 <div class="service-card-footer">
-                  <a href="{{ route('dashboard.submissions') }}" class="service-btn">
+                  <a href="{{ $submissionsRoute }}" class="service-btn">
                     Ajukan Sekarang &rarr;
                   </a>
                 </div>
@@ -420,7 +431,7 @@
                   <li>Tracking status pengaduan</li>
                 </ul>
                 <div class="service-card-footer">
-                  <a href="{{ route('dashboard.complaints') }}" class="service-btn">Laporkan Sekarang &rarr;</a>
+                  <a href="{{ $complaintsRoute }}" class="service-btn">Laporkan Sekarang &rarr;</a>
                 </div>
               </div>
             </div>
