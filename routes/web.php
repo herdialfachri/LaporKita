@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SubmissionController;
 
 Route::get('/', function () {
     return view('index');
@@ -16,9 +17,10 @@ Route::middleware(['auth', 'verified', 'role:user'])
             return view('user.dashboard');
         })->name('index');
 
-        Route::get('/submissions', function () {
-            return view('user.submissions');
-        })->name('submissions');
+        // Pengajuan
+        Route::get('/submissions', [SubmissionController::class, 'index'])->name('submissions');
+        Route::get('/submissions/create', [SubmissionController::class, 'create'])->name('submissions.create');
+        Route::post('/submissions', [SubmissionController::class, 'store'])->name('submissions.store');
 
         Route::get('/complaints', function () {
             return view('user.complaints');
