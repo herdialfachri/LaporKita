@@ -52,47 +52,51 @@
     <div id="app">
 
         <nav id="navbar-main" class="navbar is-fixed-top">
+
             <div class="navbar-brand">
                 <a class="navbar-item mobile-aside-button">
-                    <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
+                    <span class="icon">
+                        <i class="mdi mdi-forwardburger mdi-24px"></i>
+                    </span>
                 </a>
             </div>
+
             <div class="navbar-brand is-right">
                 <a class="navbar-item --jb-navbar-menu-toggle" data-target="navbar-menu">
-                    <span class="icon"><i class="mdi mdi-dots-vertical mdi-24px"></i></span>
+                    <span class="icon">
+                        <i class="mdi mdi-dots-vertical mdi-24px"></i>
+                    </span>
                 </a>
             </div>
+
             <div class="navbar-menu" id="navbar-menu">
+
                 <div class="navbar-end">
-                    <div class="navbar-item dropdown has-divider has-user-avatar">
-                        <a class="navbar-link">
+
+                    <div class="navbar-item has-user-avatar">
+
+                        <div class="navbar-link flex items-center gap-2 cursor-default">
+
                             <div class="user-avatar">
-                                <img src="https://ui-avatars.com/api/?name={{ urlencode(auth()->user()->name) }}&background=random&color=fff&rounded=true"
+                                <img
+                                    src="https://ui-avatars.com/api/?name={{ urlencode(auth()->user()->name) }}&background=random&color=fff&rounded=true"
                                     alt="{{ auth()->user()->name }}">
                             </div>
-                            <div class="is-user-name"><span>Hi, {{ auth()->user()->name }}</span></div>
-                            <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
-                        </a>
-                        <div class="navbar-dropdown">
-                            <a href="{{ route('dashboard.profile') }}" class="navbar-item">
-                                <span class="icon"><i class="mdi mdi-account"></i></span>
-                                <span>Profil Saya</span>
-                            </a>
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-                                <a href="#" onclick="event.preventDefault(); this.closest('form').submit();" class="navbar-item">
-                                    <span class="icon"><i class="mdi mdi-logout"></i></span>
-                                    <span>Logout</span>
-                                </a>
-                            </form>
+
+                            <div class="is-user-name m-0 p-0">
+                                <span>
+                                    Hi, {{ auth()->user()->name }}
+                                </span>
+                            </div>
+
                         </div>
+
                     </div>
-                    <a href="https://themewagon.com/themes/free-tailwind-css-html5-admin-dashboard-template-admin-one/" target="_blank" class="navbar-item has-divider desktop-icon-only">
-                        <span class="icon"><i class="mdi mdi-help-circle-outline"></i></span>
-                        <span>About</span>
-                    </a>
+
                 </div>
+
             </div>
+
         </nav>
 
         <aside class="aside is-placed-left is-expanded">
@@ -166,16 +170,6 @@
             {{ $slot }}
 
         </section>
-
-        <footer class="footer">
-            <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
-                <div class="flex items-center justify-start space-x-3">
-                    <div>
-                        © 2021, JustBoil.me • Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
 
         <div id="sample-modal" class="modal">
             <div class="modal-background --jb-modal-close"></div>
