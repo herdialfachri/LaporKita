@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubmissionController;
+use App\Http\Controllers\ComplaintController;
 
 Route::get('/', function () {
     return view('index');
@@ -13,18 +14,40 @@ Route::middleware(['auth', 'verified', 'role:user'])
     ->prefix('dashboard')
     ->name('dashboard.')
     ->group(function () {
+
         Route::get('/', function () {
             return view('user.dashboard');
         })->name('index');
 
+        // ======================
         // Pengajuan
-        Route::get('/submissions', [SubmissionController::class, 'index'])->name('submissions');
-        Route::get('/submissions/create', [SubmissionController::class, 'create'])->name('submissions.create');
-        Route::post('/submissions', [SubmissionController::class, 'store'])->name('submissions.store');
+        // ======================
 
-        Route::get('/complaints', function () {
-            return view('user.complaints');
-        })->name('complaints');
+        Route::get('/submissions', [SubmissionController::class, 'index'])
+            ->name('submissions');
+
+        Route::get('/submissions/create', [SubmissionController::class, 'create'])
+            ->name('submissions.create');
+
+        Route::post('/submissions', [SubmissionController::class, 'store'])
+            ->name('submissions.store');
+
+        // ======================
+        // Pengaduan
+        // ======================
+
+        Route::get('/complaints', [ComplaintController::class, 'index'])
+            ->name('complaints');
+
+        Route::get('/complaints/create', [ComplaintController::class, 'create'])
+            ->name('complaints.create');
+
+        Route::post('/complaints', [ComplaintController::class, 'store'])
+            ->name('complaints.store');
+
+        // ======================
+        // Profile
+        // ======================
 
         Route::get('/profile', function () {
             return view('user.profile');

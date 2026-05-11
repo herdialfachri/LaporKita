@@ -3,94 +3,112 @@
   <x-slot:breadcrumb>
     <li>Dashboard</li>
     <li>Pengaduan</li>
+    <li>Buat Pengaduan</li>
     </x-slot>
 
     <div class="card mb-6">
       <header class="card-header">
         <p class="card-header-title">
-          <span class="icon"><i class="mdi mdi-ballot"></i></span>
-          Forms
+          <span class="icon">
+            <i class="mdi mdi-alert-circle"></i>
+          </span>
+
+          Form Pengaduan
         </p>
       </header>
+
       <div class="card-content">
-        <form method="get">
+
+        @if ($errors->any())
+        <div class="notification red">
+          <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+          </ul>
+        </div>
+        @endif
+
+        <form
+          method="POST"
+          action="{{ route('dashboard.complaints.store') }}"
+          enctype="multipart/form-data">
+
+          @csrf
+
           <div class="field">
-            <label class="label">From</label>
-            <div class="field-body">
-              <div class="field">
-                <div class="control icons-left">
-                  <input class="input" type="text" placeholder="Name">
-                  <span class="icon left"><i class="mdi mdi-account"></i></span>
-                </div>
-              </div>
-              <div class="field">
-                <div class="control icons-left icons-right">
-                  <input class="input" type="email" placeholder="Email" value="alex@smith.com">
-                  <span class="icon left"><i class="mdi mdi-mail"></i></span>
-                  <span class="icon right"><i class="mdi mdi-check"></i></span>
-                </div>
-              </div>
+            <label class="label">Judul Pengaduan</label>
+
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                name="title"
+                value="{{ old('title') }}"
+                placeholder="Masukkan judul pengaduan">
             </div>
           </div>
+
           <div class="field">
-            <div class="field-body">
-              <div class="field">
-                <div class="field addons">
-                  <div class="control">
-                    <input class="input" value="+44" size="3" readonly>
-                  </div>
-                  <div class="control expanded">
-                    <input class="input" type="tel" placeholder="Your phone number">
-                  </div>
-                </div>
-                <p class="help">Do not enter the first zero</p>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Department</label>
+            <label class="label">Kategori</label>
+
             <div class="control">
               <div class="select">
-                <select>
-                  <option>Business development</option>
-                  <option>Marketing</option>
-                  <option>Sales</option>
+                <select name="category">
+                  <option value="">Pilih kategori</option>
+
+                  <option value="pelayanan">Pelayanan</option>
+                  <option value="petugas">Petugas</option>
+                  <option value="fasilitas">Fasilitas</option>
+                  <option value="website">Website</option>
+                  <option value="lainnya">Lainnya</option>
                 </select>
               </div>
             </div>
           </div>
-          <hr>
+
           <div class="field">
-            <label class="label">Subject</label>
+            <label class="label">Deskripsi Pengaduan</label>
 
             <div class="control">
-              <input class="input" type="text" placeholder="e.g. Partnership opportunity">
+              <textarea
+                class="textarea"
+                name="description"
+                placeholder="Jelaskan pengaduan anda">{{ old('description') }}</textarea>
             </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Upload Bukti</label>
+
+            <div class="control">
+              <input
+                class="input"
+                type="file"
+                name="evidence_file">
+            </div>
+
             <p class="help">
-              This field is required
+              Format: JPG, PNG, PDF (Max 5MB)
             </p>
           </div>
 
-          <div class="field">
-            <label class="label">Question</label>
-            <div class="control">
-              <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
-            </div>
-          </div>
           <hr>
 
           <div class="field grouped">
             <div class="control">
               <button type="submit" class="button green">
-                Submit
+                Kirim Pengaduan
               </button>
             </div>
+
             <div class="control">
               <button type="reset" class="button red">
                 Reset
               </button>
             </div>
           </div>
+
         </form>
       </div>
     </div>
