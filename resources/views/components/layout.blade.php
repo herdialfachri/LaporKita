@@ -106,6 +106,33 @@
                 </div>
             </div>
             <div class="menu is-menu-main">
+
+                {{-- ADMIN --}}
+                @if(Auth::user()->role === 'admin')
+                <p class="menu-label">Aktivitas</p>
+                <ul class="menu-list">
+                    <li class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
+                        <a href="{{ route('admin.dashboard') }}">
+                            <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+                            <span class="menu-item-label">Dashboard Admin</span>
+                        </a>
+                    </li>
+                </ul>
+
+                {{-- STAFF --}}
+                @elseif(Auth::user()->role === 'staff')
+                <p class="menu-label">Aktivitas</p>
+                <ul class="menu-list">
+                    <li class="{{ request()->routeIs('staff.dashboard') ? 'active' : '' }}">
+                        <a href="{{ route('staff.dashboard') }}">
+                            <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+                            <span class="menu-item-label">Dashboard Staff</span>
+                        </a>
+                    </li>
+                </ul>
+
+                {{-- USER --}}
+                @else
                 <p class="menu-label">Aktivitas</p>
                 <ul class="menu-list">
                     <li class="{{ request()->routeIs('dashboard.index') ? 'active' : '' }}">
@@ -136,6 +163,9 @@
                         </a>
                     </li>
                 </ul>
+                @endif
+
+                {{-- Navigasi umum untuk semua role --}}
                 <p class="menu-label">Navigasi</p>
                 <ul class="menu-list">
                     <li>
@@ -156,6 +186,7 @@
                 </ul>
             </div>
         </aside>
+
 
         <section class="is-title-bar">
             <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">

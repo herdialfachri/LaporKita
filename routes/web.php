@@ -60,21 +60,23 @@ Route::middleware(['auth', 'verified', 'role:admin'])
     ->prefix('dashboard/admin')
     ->name('admin.')
     ->group(function () {
-
-        Route::get('/', function () {
-            return view('admin.dashboard');
-        })->name('dashboard');
+        Route::get('/', [SubmissionController::class, 'adminIndex'])
+            ->name('dashboard');
+        Route::patch('/submissions/{submission}', [SubmissionController::class, 'update'])
+            ->name('submissions.update');
     });
+
 
 Route::middleware(['auth', 'verified', 'role:staff'])
     ->prefix('dashboard/staff')
     ->name('staff.')
     ->group(function () {
-
-        Route::get('/', function () {
-            return view('staff.dashboard');
-        })->name('dashboard');
+        Route::get('/', [SubmissionController::class, 'adminIndex'])
+            ->name('dashboard');
+        Route::patch('/submissions/{submission}', [SubmissionController::class, 'update'])
+            ->name('submissions.update');
     });
+
 
 Route::middleware('auth')->group(function () {
 
