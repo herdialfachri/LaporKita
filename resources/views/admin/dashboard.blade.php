@@ -19,6 +19,7 @@
               <th>Lokasi</th>
               <th>Tanggal Mulai</th>
               <th>Tanggal Selesai</th>
+              <th>File</th> <!-- Tambah kolom file -->
               <th>Status</th>
               <th>Aksi</th>
             </tr>
@@ -29,15 +30,27 @@
               <td>{{ $submission->title }}</td>
               <td>{{ ucfirst($submission->type) }}</td>
               <td>{{ $submission->location }}</td>
-              <td>{{ $submission->start_date }}</td>
-              <td>{{ $submission->end_date }}</td>
+              <td>{{ $submission->start_date ?? '-' }}</td>
+              <td>{{ $submission->end_date ?? '-' }}</td>
               <td>
-                @switch($submission->status)
-                @case('submitted') Diajukan @break
-                @case('approved') Disetujui @break
-                @case('rejected') Ditolak @break
-                @default {{ $submission->status }}
-                @endswitch
+                @if ($submission->document_file)
+                <a href="{{ asset('storage/' . $submission->document_file) }}" target="_blank" class="button small blue">
+                  Lihat File
+                </a>
+                @else
+                -
+                @endif
+              </td>
+              <td>
+                @if ($submission->status == 'verified')
+                <span class="badge yellow">Terverifikasi</span>
+                @elseif ($submission->status == 'approved')
+                <span class="badge green">Disetujui</span>
+                @elseif ($submission->status == 'rejected')
+                <span class="badge red">Ditolak</span>
+                @elseif ($submission->status == 'submitted')
+                <span class="badge blue">Diajukan</span>
+                @endif
               </td>
               <td>
                 <form action="{{ route('admin.submissions.update', $submission->id) }}" method="POST">
@@ -54,7 +67,6 @@
 
                   <button type="submit" class="button small green">Update</button>
                 </form>
-
               </td>
             </tr>
             @endforeach
