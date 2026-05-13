@@ -3,136 +3,160 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Daftar | LaporKita</title>
-    <link rel="stylesheet" href="{{ asset('assets/landing_page/src/css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <link rel="icon" href="{{ asset('assets/landing_page/src/img/favicon.jpg') }}">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Auth CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/auth/auth.css') }}">
 </head>
 
-<body class="text-gray-700" style="background: #f8f8f8; min-height: 100vh; display: flex; flex-direction: column;">
+<body>
 
-    <!-- MAIN -->
-    <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 3rem 1rem;">
-        <div style="width: 100%; max-width: 420px;">
+    <div class="auth-wrapper">
 
-            <!-- Card -->
-            <div style="background: #fff; border: 1px solid #efefef;">
+        <div class="auth-card">
 
-                <!-- Card Header -->
-                <div style="background: #f8f8f8; padding: 1.5rem; text-align: center; border-bottom: 1px solid #efefef;">
-                    <h1 style="color: #1c1c1c; font-size: 1.25rem; font-weight: 700; margin: 0;">Buat Akun Baru</h1>
-                    <p style="color: #7d7d7d; font-size: 0.8rem; margin-top: 0.3rem;">Daftar untuk mengakses layanan</p>
+            <!-- HEADER -->
+            <div class="auth-header">
+
+                <div class="logo">
+                    LK
                 </div>
 
-                <!-- Card Body -->
-                <div style="padding: 2rem;">
+                <h1 class="auth-title">
+                    Buat Akun Baru
+                </h1>
 
-                    {{-- Error --}}
-                    @if ($errors->any())
-                    <div style="background: #fef2f2; border-left: 3px solid #dc2626; padding: 0.75rem 1rem; margin-bottom: 1rem; font-size: 0.85rem; color: #dc2626;">
-                        @foreach ($errors->all() as $error)
-                        <div>{{ $error }}</div>
-                        @endforeach
+                <p class="auth-subtitle">
+                    Daftar untuk mengakses layanan LaporKita
+                </p>
+
+            </div>
+
+            <!-- BODY -->
+            <div class="auth-body">
+
+                {{-- ERROR --}}
+                @if ($errors->any())
+                <div class="alert alert-error">
+                    @foreach ($errors->all() as $error)
+                    <div>{{ $error }}</div>
+                    @endforeach
+                </div>
+                @endif
+
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
+
+                    <!-- NAMA LENGKAP -->
+                    <div class="form-group">
+
+                        <label class="form-label">
+                            Nama Lengkap
+                        </label>
+
+                        <input
+                            type="text"
+                            name="name"
+                            value="{{ old('name') }}"
+                            required
+                            autofocus
+                            autocomplete="name"
+                            class="form-input"
+                            placeholder="Nama lengkap Anda">
+
                     </div>
-                    @endif
 
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+                    <!-- EMAIL -->
+                    <div class="form-group">
 
-                        <!-- Nama -->
-                        <div style="margin-bottom: 1.25rem;">
-                            <label for="name" style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #1c1c1c; margin-bottom: 0.4rem;">
-                                Nama Lengkap
-                            </label>
-                            <input
-                                id="name"
-                                type="text"
-                                name="name"
-                                value="{{ old('name') }}"
-                                required
-                                autofocus
-                                autocomplete="name"
-                                style="width: 100%; padding: 0.6rem 0.875rem; border: 1px solid #e0e0e0; font-size: 0.875rem; font-family: Roboto, sans-serif; color: #1c1c1c; outline: none; box-sizing: border-box;"
-                                onfocus="this.style.borderColor='#dc2626'"
-                                onblur="this.style.borderColor='#e0e0e0'"
-                                placeholder="Nama lengkap Anda">
-                        </div>
+                        <label class="form-label">
+                            Email
+                        </label>
 
-                        <!-- Email -->
-                        <div style="margin-bottom: 1.25rem;">
-                            <label for="email" style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #1c1c1c; margin-bottom: 0.4rem;">
-                                Email
-                            </label>
-                            <input
-                                id="email"
-                                type="email"
-                                name="email"
-                                value="{{ old('email') }}"
-                                required
-                                autocomplete="username"
-                                style="width: 100%; padding: 0.6rem 0.875rem; border: 1px solid #e0e0e0; font-size: 0.875rem; font-family: Roboto, sans-serif; color: #1c1c1c; outline: none; box-sizing: border-box;"
-                                onfocus="this.style.borderColor='#dc2626'"
-                                onblur="this.style.borderColor='#e0e0e0'"
-                                placeholder="email@contoh.com">
-                        </div>
+                        <input
+                            type="email"
+                            name="email"
+                            value="{{ old('email') }}"
+                            required
+                            autocomplete="username"
+                            class="form-input"
+                            placeholder="email@contoh.com">
 
-                        <!-- Password -->
-                        <div style="margin-bottom: 1.25rem;">
-                            <label for="password" style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #1c1c1c; margin-bottom: 0.4rem;">
-                                Password
-                            </label>
-                            <input
-                                id="password"
-                                type="password"
-                                name="password"
-                                required
-                                autocomplete="new-password"
-                                style="width: 100%; padding: 0.6rem 0.875rem; border: 1px solid #e0e0e0; font-size: 0.875rem; font-family: Roboto, sans-serif; color: #1c1c1c; outline: none; box-sizing: border-box;"
-                                onfocus="this.style.borderColor='#dc2626'"
-                                onblur="this.style.borderColor='#e0e0e0'"
-                                placeholder="••••••••">
-                        </div>
+                    </div>
 
-                        <!-- Konfirmasi Password -->
-                        <div style="margin-bottom: 1.5rem;">
-                            <label for="password_confirmation" style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #1c1c1c; margin-bottom: 0.4rem;">
-                                Konfirmasi Password
-                            </label>
-                            <input
-                                id="password_confirmation"
-                                type="password"
-                                name="password_confirmation"
-                                required
-                                autocomplete="new-password"
-                                style="width: 100%; padding: 0.6rem 0.875rem; border: 1px solid #e0e0e0; font-size: 0.875rem; font-family: Roboto, sans-serif; color: #1c1c1c; outline: none; box-sizing: border-box;"
-                                onfocus="this.style.borderColor='#dc2626'"
-                                onblur="this.style.borderColor='#e0e0e0'"
-                                placeholder="••••••••">
-                        </div>
+                    <!-- PASSWORD -->
+                    <div class="form-group">
 
-                        <!-- Submit -->
-                        <button
-                            type="submit"
-                            style="width: 100%; background: #dc2626; color: #fff; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.75rem; border: none; cursor: pointer; font-family: Roboto, sans-serif; transition: background 0.2s;"
-                            onmouseover="this.style.background='#b91c1c'"
-                            onmouseout="this.style.background='#dc2626'">
-                            Daftar Sekarang &rarr;
-                        </button>
+                        <label class="form-label">
+                            Password
+                        </label>
 
-                    </form>
-                </div>
+                        <input
+                            type="password"
+                            name="password"
+                            required
+                            autocomplete="new-password"
+                            class="form-input"
+                            placeholder="••••••••">
 
-                <!-- Card Footer -->
-                <div style="padding: 1rem 2rem; border-top: 1px solid #efefef; text-align: center; font-size: 0.8rem; color: #7d7d7d;">
-                    Sudah punya akun?
-                    <a href="{{ route('login') }}" style="color: #dc2626; font-weight: 700; text-decoration: none;">Masuk sekarang</a>
-                </div>
+                    </div>
+
+                    <!-- KONFIRMASI PASSWORD -->
+                    <div class="form-group">
+
+                        <label class="form-label">
+                            Konfirmasi Password
+                        </label>
+
+                        <input
+                            type="password"
+                            name="password_confirmation"
+                            required
+                            autocomplete="new-password"
+                            class="form-input"
+                            placeholder="••••••••">
+
+                    </div>
+
+                    <!-- BUTTON -->
+                    <button
+                        type="submit"
+                        class="btn">
+
+                        Daftar Sekarang
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- FOOTER -->
+            <div class="auth-footer">
+
+                Sudah punya akun?
+
+                <a
+                    href="{{ route('login') }}"
+                    class="auth-link">
+
+                    Masuk sekarang
+
+                </a>
 
             </div>
 
         </div>
-    </main>
+
+    </div>
 
 </body>
 

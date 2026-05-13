@@ -9,6 +9,9 @@
 
     <!-- Tailwind is included -->
     <link rel="stylesheet" href="{{ asset('assets/admin_panel/css/main.css') }}?v=1772427751095">
+    <link rel="stylesheet" href="{{ asset('assets/admin_panel/css/theme-override.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}" />
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}" />
@@ -69,24 +72,37 @@
                 </a>
             </div>
 
-            <div class="navbar-menu" id="navbar-menu">
+            <nav id="navbar-main" class="navbar is-fixed-top">
 
-                <div class="navbar-end">
+                <div class="navbar-brand">
+                    <a class="navbar-item mobile-aside-button">
+                        <span class="icon">
+                            <i class="mdi mdi-menu mdi-24px"></i>
+                        </span>
+                    </a>
+                </div>
 
-                    <div class="navbar-item has-user-avatar">
+                <div class="navbar-menu" id="navbar-menu">
 
-                        <div class="navbar-link flex items-center gap-2 cursor-default">
+                    <div class="navbar-end">
 
-                            <div class="user-avatar">
-                                <img
-                                    src="https://ui-avatars.com/api/?name={{ urlencode(auth()->user()->name) }}&background=random&color=fff&rounded=true"
-                                    alt="{{ auth()->user()->name }}">
-                            </div>
+                        <div class="navbar-item has-user-avatar">
 
-                            <div class="is-user-name m-0 p-0">
-                                <span>
-                                    Hi, {{ auth()->user()->name }}
-                                </span>
+                            <div class="navbar-link flex items-center gap-3 cursor-default">
+
+                                <div class="user-avatar">
+                                    <img
+                                        src="https://ui-avatars.com/api/?name={{ urlencode(auth()->user()->name) }}&background=E8B14C&color=07213e&rounded=true"
+                                        alt="{{ auth()->user()->name }}">
+                                </div>
+
+                                <div class="is-user-name">
+                                    <span>{{ auth()->user()->name }}</span>
+                                    <small class="block text-xs opacity-70">
+                                        {{ ucfirst(auth()->user()->role) }}
+                                    </small>
+                                </div>
+
                             </div>
 
                         </div>
@@ -95,14 +111,14 @@
 
                 </div>
 
-            </div>
+            </nav>
 
         </nav>
 
         <aside class="aside is-placed-left is-expanded">
             <div class="aside-tools">
                 <div>
-                    Admin <b class="font-black">One</b>
+                    Lapor<span style="color:#e8b14c;">Kita</span>
                 </div>
             </div>
             <div class="menu is-menu-main">
@@ -168,12 +184,12 @@
                 {{-- Navigasi umum untuk semua role --}}
                 <p class="menu-label">Navigasi</p>
                 <ul class="menu-list">
-                    <li>
+                    <!-- <li>
                         <a href="{{ route('home') }}">
                             <span class="icon"><i class="mdi mdi-home"></i></span>
                             <span class="menu-item-label">Beranda</span>
                         </a>
-                    </li>
+                    </li> -->
                     <li>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf

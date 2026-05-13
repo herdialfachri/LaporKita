@@ -1,0 +1,441 @@
+/* =========================================================
+   LAPORKITA MODERN UI
+   ========================================================= */
+
+:root {
+    --navy: #071c34;
+    --navy-light: #0f2e53;
+    --navy-soft: #123a67;
+
+    --gold: #e8b14c;
+    --gold-soft: #f5d38c;
+
+    --white: #ffffff;
+    --offwhite: #f4f7fb;
+
+    --text: #d8e1ee;
+    --text-soft: #93a4bd;
+
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    --radius: 18px;
+}
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+html,
+body {
+    background: var(--offwhite);
+    font-family: "Inter", sans-serif;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    height: 72px;
+    background: linear-gradient(
+        135deg,
+        var(--navy),
+        var(--navy-light)
+    ) !important;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    backdrop-filter: blur(10px);
+}
+
+/* hamburger */
+
+.navbar-brand .navbar-item {
+    transition: 0.2s ease;
+    border-radius: 12px;
+}
+
+.navbar-brand .navbar-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.navbar .icon i {
+    color: var(--gold) !important;
+}
+
+/* profile */
+
+.navbar-item.has-user-avatar {
+    padding-right: 1rem;
+}
+
+.navbar-item.has-user-avatar .navbar-link {
+    background: rgba(255, 255, 255, 0.06) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    padding: 0.5rem 0.9rem;
+
+    border-radius: 14px;
+
+    transition: 0.2s;
+}
+
+.navbar-item.has-user-avatar .navbar-link:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.user-avatar img {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--gold);
+}
+
+.is-user-name span {
+    color: white !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.aside {
+    background: linear-gradient(180deg, var(--navy), #081522) !important;
+
+    border-right: none !important;
+
+    width: 260px;
+}
+
+/* logo */
+
+.aside-tools {
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 1.3rem;
+
+    background: transparent !important;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white !important;
+}
+
+.aside-tools b {
+    color: var(--gold);
+}
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.menu-label {
+    color: var(--gold-soft) !important;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+
+    padding-left: 1rem;
+
+    margin-top: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+/* item */
+
+.menu-list li {
+    margin-bottom: 0.4rem;
+}
+
+.menu-list a {
+    height: 48px;
+
+    margin: 0 0.8rem;
+
+    border-radius: 14px;
+
+    color: var(--text-soft) !important;
+
+    transition: all 0.25s ease;
+
+    display: flex;
+    align-items: center;
+}
+
+.menu-list a .icon {
+    margin-right: 0.7rem;
+}
+
+.menu-list a .icon i {
+    color: var(--text-soft) !important;
+    transition: 0.25s;
+}
+
+/* hover */
+
+.menu-list a:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+
+    transform: translateX(4px);
+
+    color: white !important;
+}
+
+.menu-list a:hover .icon i {
+    color: var(--gold) !important;
+}
+
+/* active */
+
+.menu-list li.active a {
+    background: linear-gradient(135deg, var(--gold), #f6cf77) !important;
+
+    color: var(--navy) !important;
+
+    font-weight: 700;
+
+    box-shadow: 0 8px 20px rgba(232, 177, 76, 0.25);
+}
+
+.menu-list li.active a .icon i {
+    color: var(--navy) !important;
+}
+
+/* =========================================================
+   TITLE BAR
+   ========================================================= */
+
+.is-title-bar {
+    background: transparent !important;
+
+    border: none !important;
+
+    padding: 1.5rem 2rem 0.5rem;
+}
+
+.is-title-bar ul li {
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.section.main-section {
+    background: var(--offwhite);
+
+    padding: 1.5rem 2rem 2rem;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.card {
+    background: white;
+
+    border: none !important;
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* header */
+
+.card-header {
+    background: white !important;
+
+    border-bottom: 1px solid #eef2f7;
+
+    padding: 1rem 1.3rem;
+}
+
+.card-header-title {
+    color: var(--navy) !important;
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.card-header-title .icon i {
+    color: var(--gold) !important;
+}
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.button {
+    border-radius: 12px !important;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.button.blue,
+.button.is-primary {
+    background: linear-gradient(135deg, var(--gold), #f4ca72) !important;
+
+    border: none !important;
+
+    color: var(--navy) !important;
+
+    box-shadow: 0 8px 20px rgba(232, 177, 76, 0.25);
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+table thead th {
+    background: #f8fafc !important;
+
+    color: var(--navy) !important;
+
+    border: none !important;
+
+    font-weight: 700;
+
+    font-size: 0.85rem;
+}
+
+table tbody tr {
+    transition: 0.2s;
+}
+
+table tbody tr:hover {
+    background: rgba(232, 177, 76, 0.07) !important;
+}
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.input,
+.textarea,
+.select select {
+    border-radius: 12px !important;
+
+    border: 1px solid #dbe4ef !important;
+
+    box-shadow: none !important;
+}
+
+.input:focus,
+.textarea:focus,
+.select select:focus {
+    border-color: var(--gold) !important;
+
+    box-shadow: 0 0 0 4px rgba(232, 177, 76, 0.15) !important;
+}
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.modal-card {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.modal-card-head {
+    background: var(--navy) !important;
+}
+
+.modal-card-title {
+    color: white !important;
+}
+
+.modal-card-foot {
+    background: #f9fbfd !important;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.aside::-webkit-scrollbar {
+    width: 6px;
+}
+
+.aside::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+}
+
+/* =========================
+   FIX NAVBAR MENU PUTIH
+   ========================= */
+
+.navbar-menu {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* mobile dropdown */
+@media screen and (max-width: 1023px) {
+    .navbar-menu {
+        background: linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy-light)
+        ) !important;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+        padding: 0.7rem;
+    }
+}
+
+/* right section */
+.navbar-end {
+    align-items: center;
+}
+
+/* hilangin putih bawaan bulma */
+.navbar-brand,
+.navbar-item,
+.navbar-link {
+    background: transparent !important;
+}
+
+/* hover desktop */
+.navbar-item:hover,
+.navbar-link:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+}
