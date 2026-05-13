@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Submission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Complaint;
+use App\Models\Division;
+use App\Models\Submission;
 
 class SubmissionController extends Controller
 {
@@ -54,20 +56,44 @@ class SubmissionController extends Controller
         $user = Auth::user();
 
         if ($user->role === 'admin') {
-            // Admin hanya lihat submissions yang statusnya verified, approved, atau rejected
-            // dan assigned_division_id sesuai divisi admin
-            $submissions = Submission::whereIn('status', ['verified', 'approved', 'rejected'])
+
+            // submissions
+            $submissions = Submission::whereIn('status', [
+                'verified',
+                'approved',
+                'rejected'
+            ])
                 ->where('assigned_division_id', $user->division_id)
                 ->latest()
                 ->get();
 
-            return view('admin.dashboard', compact('submissions'));
-        } elseif ($user->role === 'staff') {
-            // Staff bisa lihat semua submissions
-            $submissions = Submission::latest()->get();
-            $divisions = \App\Models\Division::all();
+            // complaints
+            $complaints = Complaint::whereIn('status', [
+                'in_review',
+                'responded',
+                'closed'
+            ])->latest()->get();
 
-            return view('staff.dashboard', compact('submissions', 'divisions'));
+            return view('admin.dashboard', compact(
+                'submissions',
+                'complaints'
+            ));
+        } elseif ($user->role === 'staff') {
+
+            // submissions
+            $submissions = Submission::latest()->get();
+
+            // divisions
+            $divisions = Division::all();
+
+            // complaints
+            $complaints = Complaint::latest()->get();
+
+            return view('staff.dashboard', compact(
+                'submissions',
+                'divisions',
+                'complaints'
+            ));
         } else {
             abort(403);
         }

@@ -52,4 +52,33 @@ class ComplaintController extends Controller
             ->route('dashboard.index')
             ->with('success', 'Pengaduan berhasil dikirim.');
     }
+
+    public function staffUpdate(Request $request, Complaint $complaint)
+    {
+        $validated = $request->validate([
+            'status' => 'required|in:in_review,responded,closed',
+        ]);
+
+        $complaint->update([
+            'status' => $validated['status'],
+            'assigned_staff_id' => Auth::id(),
+        ]);
+
+        return back()->with('success', 'Status pengaduan berhasil diupdate.');
+    }
+
+    public function adminUpdate(Request $request, Complaint $complaint)
+    {
+        $validated = $request->validate([
+            'status' => 'required|in:responded,closed',
+            'admin_feedback' => 'required|string',
+        ]);
+
+        $complaint->update([
+            'status' => $validated['status'],
+            'admin_feedback' => $validated['admin_feedback'],
+        ]);
+
+        return back()->with('success', 'Feedback admin berhasil dikirim.');
+    }
 }
