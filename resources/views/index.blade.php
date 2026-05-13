@@ -38,10 +38,21 @@ $complaintsRoute = $role === 'user' ? route('dashboard.complaints') : $dashboard
 <body class="text-gray-700 pt-9 sm:pt-10">
   <!-- ========== { HEADER }==========  -->
   <header class="fixed top-0 left-0 right-0 z-50">
-    <nav class="bg-black">
+    <nav style="background-color: #07213e;">
       <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
         <div class="flex justify-between">
-          <div class="mx-w-10 text-2xl font-bold capitalize text-white flex items-center">Tailnews</div>
+          <div class="flex items-center gap-3 py-2 sm:py-3">
+            <a href="#beranda" class="flex items-center">
+              <img
+                src="{{ asset('assets/landing_page/src/img/kemenkumham.png') }}"
+                alt="Logo"
+                style="height: 45px; width: auto;">
+              <div style="margin-left: 10px; display: flex; flex-direction: column;">
+                <span style="font-size: 14px; font-weight: 700; text-transform: uppercase; color: white; line-height: 1.3;">Kantor Wilayah</span>
+                <span style="font-size: 12px; font-weight: 400; color: white; line-height: 1.3;">Direktorat Jenderal Pemasyarakatan Jabar</span>
+              </div>
+            </a>
+          </div>
 
           <div class="flex flex-row">
             <!-- nav menu -->
@@ -907,7 +918,7 @@ $complaintsRoute = $role === 'user' ? route('dashboard.complaints') : $dashboard
   </main><!-- end main -->
 
   <!-- =========={ FOOTER }==========  -->
-  <footer class="bg-black text-gray-400">
+  <footer style="background-color: #07213e;" class="text-gray-400">
     <!--Footer content-->
     <div id="footer-content" class="relative pt-8 xl:pt-16 pb-6 xl:pb-12">
       <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2 overflow-hidden">

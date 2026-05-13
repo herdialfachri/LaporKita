@@ -21,34 +21,22 @@
               <th>No</th>
               <th>Jenis</th>
               <th>Judul</th>
-              <th>Deskripsi</th>
               <th>Lokasi</th>
-              <th>File</th>
               <th>Tanggal Mulai</th>
               <th>Tanggal Selesai</th>
               <th>Status</th>
-              <th>Tanggal Dibuat</th>
+              <th>File</th>
             </tr>
           </thead>
           <tbody>
             @forelse ($submissions as $submission)
             <tr>
               <td>{{ $loop->iteration }}</td>
-              <td>{{ strtoupper($submission->type) }}</td>
+              <td>{{ ucfirst($submission->type) }}</td>
               <td>{{ $submission->title }}</td>
-              <td>{{ $submission->description }}</td>
               <td>{{ $submission->location }}</td>
-              <td>
-                @if ($submission->document_file)
-                <a href="{{ asset('storage/' . $submission->document_file) }}" target="_blank" class="button small blue">
-                  Lihat File
-                </a>
-                @else
-                -
-                @endif
-              </td>
-              <td>{{ $submission->start_date ?? '-' }}</td>
-              <td>{{ $submission->end_date ?? '-' }}</td>
+              <td>{{ $submission->start_date ? \Carbon\Carbon::parse($submission->start_date)->format('Y-m-d') : '-' }}</td>
+              <td>{{ $submission->end_date ? \Carbon\Carbon::parse($submission->end_date)->format('Y-m-d') : '-' }}</td>
               <td>
                 @if ($submission->status == 'submitted')
                 <span class="badge blue">Dikirim</span>
@@ -64,7 +52,15 @@
                 <span class="badge red">Ditolak</span>
                 @endif
               </td>
-              <td>{{ $submission->created_at->format('d M Y H:i') }}</td>
+              <td>
+                @if ($submission->document_file)
+                <a href="{{ asset('storage/' . $submission->document_file) }}" target="_blank" class="button small blue">
+                  Lihat File
+                </a>
+                @else
+                -
+                @endif
+              </td>
             </tr>
             @empty
             <tr>
@@ -92,13 +88,12 @@
             <tr>
               <th>No</th>
               <th>Kode Pengaduan</th>
-              <th>Judul</th>
               <th>Kategori</th>
+              <th>Judul</th>
               <th>Deskripsi</th>
-              <th>File Bukti</th>
               <th>Status</th>
               <th>Feedback Admin</th>
-              <th>Tanggal Dibuat</th>
+              <th>File Bukti</th>
             </tr>
           </thead>
           <tbody>
@@ -106,18 +101,9 @@
             <tr>
               <td>{{ $loop->iteration }}</td>
               <td>{{ $complaint->complaint_code }}</td>
-              <td>{{ $complaint->title }}</td>
               <td>{{ ucfirst($complaint->category) }}</td>
+              <td>{{ $complaint->title }}</td>
               <td>{{ $complaint->description }}</td>
-              <td>
-                @if ($complaint->evidence_file)
-                <a href="{{ asset('storage/' . $complaint->evidence_file) }}" target="_blank" class="button small blue">
-                  Lihat File
-                </a>
-                @else
-                -
-                @endif
-              </td>
               <td>
                 @if ($complaint->status == 'submitted')
                 <span class="badge blue">Dikirim</span>
@@ -130,7 +116,15 @@
                 @endif
               </td>
               <td>{{ $complaint->admin_feedback ?? '-' }}</td>
-              <td>{{ $complaint->created_at->format('d M Y H:i') }}</td>
+              <td>
+                @if ($complaint->evidence_file)
+                <a href="{{ asset('storage/' . $complaint->evidence_file) }}" target="_blank" class="button small blue">
+                  Lihat File
+                </a>
+                @else
+                -
+                @endif
+              </td>
             </tr>
             @empty
             <tr>
