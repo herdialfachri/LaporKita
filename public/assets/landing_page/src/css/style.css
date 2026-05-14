@@ -1224,7 +1224,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-// Theme css
 /*! purgecss start ignore */
 /*utility*/
 .text-shadow-white {
@@ -1365,7 +1364,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: auto;
 }
 
-// splidejs
 .splide__container {
     box-sizing: border-box;
     position: relative;
@@ -1686,7 +1684,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     right: 0;
 }
 
-// splide videos
 .splide__slide--has-video {
     cursor: pointer;
 }
@@ -1744,7 +1741,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 4px;
 }
 
-// glightbox
 .glightbox-container {
     width: 100%;
     height: 100%;

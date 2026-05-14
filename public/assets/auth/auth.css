@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+
 :root {
     --navy: #07213e;
     --navy-light: #0d2d52;
@@ -20,22 +28,12 @@
 
 body {
     font-family: "Inter", sans-serif;
-
-    min-height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 2rem;
-
     background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-
-    overflow: hidden;
-
-    position: relative;
 }
-
 /* background glow */
 
 body::before,
@@ -69,9 +67,11 @@ body::after {
 .auth-wrapper {
     width: 100%;
     max-width: 430px;
-
     position: relative;
     z-index: 2;
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow-y: auto;
 }
 
 .auth-card {
@@ -324,6 +324,13 @@ body::after {
 }
 
 @media (max-width: 480px) {
+    body {
+        padding: 1.2rem;
+        align-items: flex-start;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
     .auth-card {
         border-radius: 24px;
     }
