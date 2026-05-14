@@ -59,7 +59,7 @@
             <div class="navbar-brand">
                 <a class="navbar-item mobile-aside-button">
                     <span class="icon">
-                        <i class="mdi mdi-forwardburger mdi-24px"></i>
+                        <i class="mdi mdi-menu mdi-24px"></i>
                     </span>
                 </a>
             </div>
@@ -72,54 +72,27 @@
                 </a>
             </div>
 
-            <nav id="navbar-main" class="navbar is-fixed-top">
-
-                <div class="navbar-brand">
-                    <a class="navbar-item mobile-aside-button">
-                        <span class="icon">
-                            <i class="mdi mdi-menu mdi-24px"></i>
+            <div class="navbar-menu" id="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item" style="gap: 0.6rem; display: flex; align-items: center; padding-right: 3rem;">
+                        <img
+                            src="https://ui-avatars.com/api/?name={{ urlencode(auth()->user()->name) }}&background=E8B14C&color=07213e&rounded=true"
+                            alt="{{ auth()->user()->name }}"
+                            style="width: 30px; height: 30px; border-radius: 50%;">
+                        <span style="color: white; font-size: 0.85rem;">
+                            Hi, <strong style="color: white;">{{ auth()->user()->name }}</strong>
                         </span>
-                    </a>
-                </div>
-
-                <div class="navbar-menu" id="navbar-menu">
-
-                    <div class="navbar-end">
-
-                        <div class="navbar-item has-user-avatar">
-
-                            <div class="navbar-link flex items-center gap-3 cursor-default">
-
-                                <div class="user-avatar">
-                                    <img
-                                        src="https://ui-avatars.com/api/?name={{ urlencode(auth()->user()->name) }}&background=E8B14C&color=07213e&rounded=true"
-                                        alt="{{ auth()->user()->name }}">
-                                </div>
-
-                                <div class="is-user-name">
-                                    <span>{{ auth()->user()->name }}</span>
-                                    <small class="block text-xs opacity-70">
-                                        {{ ucfirst(auth()->user()->role) }}
-                                    </small>
-                                </div>
-
-                            </div>
-
-                        </div>
-
                     </div>
-
                 </div>
-
-            </nav>
+            </div>
 
         </nav>
 
         <aside class="aside is-placed-left is-expanded">
             <div class="aside-tools">
-                <div>
+                <span style="font-size: 1rem; font-weight: 700; color: white;">
                     Lapor<span style="color:#e8b14c;">Kita</span>
-                </div>
+                </span>
             </div>
             <div class="menu is-menu-main">
 

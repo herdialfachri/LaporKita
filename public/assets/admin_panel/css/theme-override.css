@@ -68,38 +68,36 @@ body {
 /* profile */
 
 .navbar-item.has-user-avatar {
-    padding-right: 1rem;
+    padding: 0 1rem;
 }
 
 .navbar-item.has-user-avatar .navbar-link {
-    background: rgba(255, 255, 255, 0.06) !important;
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
-    padding: 0.5rem 0.9rem;
-
-    border-radius: 14px;
-
-    transition: 0.2s;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0.4rem 0.8rem !important;
+    border-radius: 12px !important;
 }
 
 .navbar-item.has-user-avatar .navbar-link:hover {
-    background: rgba(255, 255, 255, 0.12) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
 }
 
 .user-avatar img {
-    width: 42px;
-    height: 42px;
-
-    border-radius: 50%;
-
-    border: 2px solid var(--gold);
+    width: 32px !important;
+    height: 32px !important;
 }
 
 .is-user-name span {
     color: white !important;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.82rem;
+    line-height: 1.2;
+}
+
+.is-user-name small {
+    font-size: 0.68rem !important;
+    color: rgba(255, 255, 255, 0.55) !important;
 }
 
 /* =========================================================
@@ -128,7 +126,7 @@ body {
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
 
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     color: white !important;
 }
@@ -138,13 +136,153 @@ body {
 }
 
 /* =========================================================
+   STAFF DASHBOARD
+   ========================================================= */
+
+.staff-card {
+    background: var(--white);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(7, 33, 62, 0.08);
+    margin-bottom: 1.75rem;
+}
+
+.staff-card-header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-bottom: 3px solid var(--gold);
+    padding: 0.9rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.staff-card-header i {
+    color: var(--gold);
+    font-size: 1.15rem;
+}
+
+.staff-card-header span {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+
+.staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.845rem;
+    min-width: 600px;
+}
+
+.staff-table thead th {
+    background: var(--navy);
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+    border: none;
+}
+
+.staff-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background 0.12s;
+}
+
+.staff-table tbody tr:nth-child(even) {
+    background: #f8fafd;
+}
+
+.staff-table tbody tr:hover {
+    background: rgba(233, 184, 86, 0.09) !important;
+}
+
+.staff-table tbody td {
+    padding: 0.7rem 1rem;
+    color: #334155;
+    vertical-align: middle;
+}
+
+.complaint-code {
+    font-family: monospace;
+    font-size: 0.78rem;
+    background: #f0f4fa;
+    color: var(--navy);
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.action-inline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+}
+
+.action-inline select {
+    padding: 0.35rem 0.55rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 7px;
+    font-size: 0.78rem;
+    color: var(--navy);
+    background: var(--white);
+    outline: none;
+    cursor: pointer;
+    transition:
+        border-color 0.15s,
+        box-shadow 0.15s;
+    min-width: 130px;
+}
+
+.action-inline select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(233, 184, 86, 0.2);
+}
+
+.action-inline .btn-act {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.37rem 0.85rem;
+    background: var(--navy);
+    color: var(--gold);
+    border: none;
+    border-radius: 7px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+        background 0.15s,
+        transform 0.1s;
+}
+
+.action-inline .btn-act:hover {
+    background: var(--navy-light);
+    transform: translateY(-1px);
+}
+
+.feedback-cell {
+    max-width: 160px;
+    white-space: normal;
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    line-height: 1.4;
+}
+
+/* =========================================================
    MENU
    ========================================================= */
 
 .menu-label {
     color: var(--gold-soft) !important;
 
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     letter-spacing: 0.12em;
 
     padding-left: 1rem;
@@ -154,6 +292,10 @@ body {
 }
 
 /* item */
+
+.menu-item-label {
+    font-size: 0.82rem;
+}
 
 .menu-list li {
     margin-bottom: 0.4rem;
@@ -228,7 +370,7 @@ body {
 .is-title-bar ul li {
     color: var(--navy);
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 /* =========================================================
@@ -427,15 +569,8 @@ table tbody tr:hover {
     align-items: center;
 }
 
-/* hilangin putih bawaan bulma */
-.navbar-brand,
-.navbar-item,
-.navbar-link {
-    background: transparent !important;
-}
-
 /* hover desktop */
 .navbar-item:hover,
 .navbar-link:hover {
-    background: rgba(255, 255, 255, 0.06) !important;
+    background: transparent !important;
 }
