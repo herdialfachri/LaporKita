@@ -1,6 +1,6 @@
 <x-layout>
   <x-slot:breadcrumb>
-    <li>Dashboard Staff</li>
+    <li>Dashboard Admin</li>
     </x-slot>
 
     {{-- SUBMISSION --}}

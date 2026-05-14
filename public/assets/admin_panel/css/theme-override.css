@@ -244,29 +244,6 @@ body {
     box-shadow: 0 0 0 3px rgba(233, 184, 86, 0.2);
 }
 
-.action-inline .btn-act {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    padding: 0.37rem 0.85rem;
-    background: var(--navy);
-    color: var(--gold);
-    border: none;
-    border-radius: 7px;
-    font-size: 0.78rem;
-    font-weight: 700;
-    white-space: nowrap;
-    cursor: pointer;
-    transition:
-        background 0.15s,
-        transform 0.1s;
-}
-
-.action-inline .btn-act:hover {
-    background: var(--navy-light);
-    transform: translateY(-1px);
-}
-
 .feedback-cell {
     max-width: 160px;
     white-space: normal;
@@ -434,9 +411,7 @@ body {
 
 .button {
     border-radius: 12px !important;
-
     font-weight: 600;
-
     transition: 0.2s ease;
 }
 
@@ -447,12 +422,52 @@ body {
 .button.blue,
 .button.is-primary {
     background: linear-gradient(135deg, var(--gold), #f4ca72) !important;
-
     border: none !important;
-
     color: var(--navy) !important;
-
     box-shadow: 0 8px 20px rgba(232, 177, 76, 0.25);
+}
+
+.btn-act {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.37rem 0.85rem;
+    background: var(--navy);
+    color: var(--gold);
+    border: none;
+    border-radius: 7px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+        background 0.15s,
+        transform 0.1s;
+    text-decoration: none;
+}
+
+.btn-act:hover {
+    background: var(--navy-light);
+    transform: translateY(-1px);
+}
+
+.btn-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.37rem 0.85rem;
+    background: #dbeafe;
+    color: #1e40af;
+    border: none;
+    border-radius: 7px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn-submit:hover {
+    background: #bfdbfe;
 }
 
 /* =========================================================

@@ -1,26 +1,20 @@
 <x-layout>
-
   <x-slot:breadcrumb>
     <li>Dashboard</li>
     <li>Pengaduan</li>
     <li>Buat Pengaduan</li>
     </x-slot>
 
-    <div class="card mb-6">
-      <header class="card-header">
-        <p class="card-header-title">
-          <span class="icon">
-            <i class="mdi mdi-alert-circle"></i>
-          </span>
+    <div class="staff-card">
+      <div class="staff-card-header">
+        <i class="mdi mdi-alert-circle-outline"></i>
+        <span>Form Pengaduan</span>
+      </div>
 
-          Form Pengaduan
-        </p>
-      </header>
-
-      <div class="card-content">
+      <div style="padding: 1.5rem;">
 
         @if ($errors->any())
-        <div class="notification red">
+        <div style="background:#fee2e2;border-left:4px solid #ef4444;border-radius:8px;padding:.8rem 1rem;margin-bottom:1rem;font-size:.82rem;color:#991b1b;">
           <ul>
             @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
@@ -29,84 +23,50 @@
         </div>
         @endif
 
-        <form
-          method="POST"
-          action="{{ route('dashboard.complaints.store') }}"
-          enctype="multipart/form-data">
-
+        <form method="POST" action="{{ route('dashboard.complaints.store') }}" enctype="multipart/form-data">
           @csrf
 
-          <div class="field">
-            <label class="label">Judul Pengaduan</label>
-
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                name="title"
-                value="{{ old('title') }}"
-                placeholder="Masukkan judul pengaduan">
-            </div>
+          {{-- Judul --}}
+          <div style="margin-bottom:1rem;">
+            <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Judul Pengaduan</label>
+            <input type="text" name="title" value="{{ old('title') }}" placeholder="Masukkan judul pengaduan" style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;">
           </div>
 
-          <div class="field">
-            <label class="label">Kategori</label>
-
-            <div class="control">
-              <div class="select">
-                <select name="category">
-                  <option value="">Pilih kategori</option>
-
-                  <option value="pelayanan">Pelayanan</option>
-                  <option value="petugas">Petugas</option>
-                  <option value="fasilitas">Fasilitas</option>
-                  <option value="website">Website</option>
-                  <option value="lainnya">Lainnya</option>
-                </select>
-              </div>
-            </div>
+          {{-- Kategori --}}
+          <div style="margin-bottom:1rem;">
+            <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Kategori</label>
+            <select name="category" style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;color:var(--navy);background:white;outline:none;">
+              <option value="">Pilih kategori</option>
+              <option value="pelayanan">Pelayanan</option>
+              <option value="petugas">Petugas</option>
+              <option value="fasilitas">Fasilitas</option>
+              <option value="website">Website</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
           </div>
 
-          <div class="field">
-            <label class="label">Deskripsi Pengaduan</label>
-
-            <div class="control">
-              <textarea
-                class="textarea"
-                name="description"
-                placeholder="Jelaskan pengaduan anda">{{ old('description') }}</textarea>
-            </div>
+          {{-- Deskripsi --}}
+          <div style="margin-bottom:1rem;">
+            <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Deskripsi Pengaduan</label>
+            <textarea name="description" rows="4" placeholder="Jelaskan pengaduan anda" style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;resize:vertical;">{{ old('description') }}</textarea>
           </div>
 
-          <div class="field">
-            <label class="label">Upload Bukti</label>
-
-            <div class="control">
-              <input
-                class="input"
-                type="file"
-                name="evidence_file">
-            </div>
-
-            <p class="help">
-              Format: JPG, PNG, PDF (Max 5MB)
-            </p>
+          {{-- Upload --}}
+          <div style="margin-bottom:1.5rem;">
+            <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Upload Bukti</label>
+            <input type="file" name="evidence_file" accept=".jpg,.jpeg,.png,.pdf" style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;background:white;">
+            <p style="font-size:.72rem;color:var(--text-soft);margin-top:.3rem;">Format: JPG, PNG, PDF (Max 5MB)</p>
           </div>
 
-          <hr>
+          <hr style="border:none;border-top:1px solid #e2e8f0;margin-bottom:1.2rem;">
 
-          <div class="field grouped">
-            <div class="control">
-              <button type="submit" class="button green">
-                Kirim Pengaduan
-              </button>
-            </div>
-
-            <div class="control">
-              <button type="reset" class="button red">
-                Reset
-              </button>
-            </div>
+          <div style="display:flex;gap:.7rem;flex-wrap:wrap;">
+            <button type="submit" class="btn-submit">
+              <i class="mdi mdi-send"></i> Kirim Pengaduan
+            </button>
+            <button type="reset" style="display:inline-flex;align-items:center;gap:.3rem;padding:.37rem .85rem;background:#fee2e2;color:#991b1b;border:none;border-radius:7px;font-size:.78rem;font-weight:700;cursor:pointer;">
+              <i class="mdi mdi-refresh"></i> Reset
+            </button>
           </div>
 
         </form>
