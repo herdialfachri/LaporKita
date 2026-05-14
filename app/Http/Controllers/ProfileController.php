@@ -26,13 +26,42 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        $user = $request->user();
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        // simpan email lama
+        $oldEmail = $user->email;
+
+        // isi data baru
+        $user->fill($request->validated());
+
+        /*
+        |--------------------------------------------------------------------------
+        | Kalau email berubah
+        |--------------------------------------------------------------------------
+        */
+        if ($oldEmail !== $user->email) {
+
+            // reset verifikasi
+            $user->email_verified_at = null;
+
+            // simpan
+            $user->save();
+
+            // kirim email verifikasi baru
+            $user->sendEmailVerificationNotification();
+
+            // redirect ke halaman verifikasi
+            return redirect()
+                ->route('verification.notice')
+                ->with('status', 'verification-link-sent');
         }
 
-        $request->user()->save();
+        /*
+        |--------------------------------------------------------------------------
+        | Kalau email tidak berubah
+        |--------------------------------------------------------------------------
+        */
+        $user->save();
 
         return back()->with('status', 'profile-updated');
     }
@@ -53,6 +82,7 @@ class ProfileController extends Controller
         $user->delete();
 
         $request->session()->invalidate();
+
         $request->session()->regenerateToken();
 
         return Redirect::to('/');

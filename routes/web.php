@@ -89,7 +89,7 @@ Route::middleware(['auth', 'verified', 'role:staff'])
     });
 
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
 
     /*
     |--------------------------------------------------------------------------
