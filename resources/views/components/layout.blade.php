@@ -94,10 +94,12 @@
                     Lapor<span style="color:#e8b14c;">Kita</span>
                 </span>
             </div>
+
             <div class="menu is-menu-main">
 
                 {{-- ADMIN --}}
                 @if(Auth::user()->role === 'admin')
+
                 <p class="menu-label">Aktivitas</p>
                 <ul class="menu-list">
                     <li class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
@@ -108,8 +110,19 @@
                     </li>
                 </ul>
 
+                <p class="menu-label">Akun</p>
+                <ul class="menu-list">
+                    <li class="{{ request()->routeIs('admin.profile') ? 'active' : '' }}">
+                        <a href="{{ route('admin.profile') }}">
+                            <span class="icon"><i class="mdi mdi-account-circle"></i></span>
+                            <span class="menu-item-label">Profil Saya</span>
+                        </a>
+                    </li>
+                </ul>
+
                 {{-- STAFF --}}
                 @elseif(Auth::user()->role === 'staff')
+
                 <p class="menu-label">Aktivitas</p>
                 <ul class="menu-list">
                     <li class="{{ request()->routeIs('staff.dashboard') ? 'active' : '' }}">
@@ -120,8 +133,19 @@
                     </li>
                 </ul>
 
+                <p class="menu-label">Akun</p>
+                <ul class="menu-list">
+                    <li class="{{ request()->routeIs('staff.profile') ? 'active' : '' }}">
+                        <a href="{{ route('staff.profile') }}">
+                            <span class="icon"><i class="mdi mdi-account-circle"></i></span>
+                            <span class="menu-item-label">Profil Saya</span>
+                        </a>
+                    </li>
+                </ul>
+
                 {{-- USER --}}
                 @else
+
                 <p class="menu-label">Aktivitas</p>
                 <ul class="menu-list">
                     <li class="{{ request()->routeIs('dashboard.index') ? 'active' : '' }}">
@@ -131,6 +155,7 @@
                         </a>
                     </li>
                 </ul>
+
                 <p class="menu-label">Layanan</p>
                 <ul class="menu-list">
                     <li class="{{ request()->routeIs('dashboard.submissions') ? 'active' : '' }}">
@@ -139,12 +164,17 @@
                             <span class="menu-item-label">Pengajuan</span>
                         </a>
                     </li>
+
                     <li class="{{ request()->routeIs('dashboard.complaints') ? 'active' : '' }}">
                         <a href="{{ route('dashboard.complaints') }}">
                             <span class="icon"><i class="mdi mdi-square-edit-outline"></i></span>
                             <span class="menu-item-label">Pengaduan</span>
                         </a>
                     </li>
+                </ul>
+
+                <p class="menu-label">Akun</p>
+                <ul class="menu-list">
                     <li class="{{ request()->routeIs('dashboard.profile') ? 'active' : '' }}">
                         <a href="{{ route('dashboard.profile') }}">
                             <span class="icon"><i class="mdi mdi-account-circle"></i></span>
@@ -152,17 +182,12 @@
                         </a>
                     </li>
                 </ul>
+
                 @endif
 
-                {{-- Navigasi umum untuk semua role --}}
+                {{-- Navigasi umum --}}
                 <p class="menu-label">Navigasi</p>
                 <ul class="menu-list">
-                    <!-- <li>
-                        <a href="{{ route('home') }}">
-                            <span class="icon"><i class="mdi mdi-home"></i></span>
-                            <span class="menu-item-label">Beranda</span>
-                        </a>
-                    </li> -->
                     <li>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -173,6 +198,7 @@
                         </form>
                     </li>
                 </ul>
+
             </div>
         </aside>
 

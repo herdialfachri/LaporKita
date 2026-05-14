@@ -91,12 +91,47 @@ Route::middleware(['auth', 'verified', 'role:staff'])
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/profile', [ProfileController::class, 'edit'])
-        ->name('profile.edit');
+    /*
+    |--------------------------------------------------------------------------
+    | USER
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/dashboard/profile', [ProfileController::class, 'edit'])
+        ->name('dashboard.profile');
 
-    Route::patch('/profile', [ProfileController::class, 'update'])
-        ->name('profile.update');
+    Route::patch('/dashboard/profile', [ProfileController::class, 'update'])
+        ->name('dashboard.profile.update');
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | ADMIN
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/admin/profile', [ProfileController::class, 'edit'])
+        ->name('admin.profile');
+
+    Route::patch('/admin/profile', [ProfileController::class, 'update'])
+        ->name('admin.profile.update');
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | STAFF
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/staff/profile', [ProfileController::class, 'edit'])
+        ->name('staff.profile');
+
+    Route::patch('/staff/profile', [ProfileController::class, 'update'])
+        ->name('staff.profile.update');
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | DELETE ACCOUNT
+    |--------------------------------------------------------------------------
+    */
     Route::delete('/profile', [ProfileController::class, 'destroy'])
         ->name('profile.destroy');
 });
