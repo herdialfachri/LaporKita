@@ -6,7 +6,9 @@ use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Validation\Rules\Password;
 use Illuminate\View\View;
 
 class ProfileController extends Controller
@@ -28,10 +30,36 @@ class ProfileController extends Controller
     {
         $user = $request->user();
 
+        /*
+        |--------------------------------------------------------------------------
+        | VALIDASI PASSWORD
+        |--------------------------------------------------------------------------
+        */
+        if ($request->filled('password')) {
+
+            $request->validate([
+
+                'current_password' => [
+                    'required',
+                    'current_password'
+                ],
+
+                'password' => [
+                    'required',
+                    'confirmed',
+                    Password::defaults()
+                ],
+
+            ]);
+
+            // hash password baru
+            $user->password = Hash::make($request->password);
+        }
+
         // simpan email lama
         $oldEmail = $user->email;
 
-        // isi data baru
+        // update profile
         $user->fill($request->validated());
 
         /*
@@ -41,26 +69,17 @@ class ProfileController extends Controller
         */
         if ($oldEmail !== $user->email) {
 
-            // reset verifikasi
             $user->email_verified_at = null;
 
-            // simpan
             $user->save();
 
-            // kirim email verifikasi baru
             $user->sendEmailVerificationNotification();
 
-            // redirect ke halaman verifikasi
             return redirect()
                 ->route('verification.notice')
                 ->with('status', 'verification-link-sent');
         }
 
-        /*
-        |--------------------------------------------------------------------------
-        | Kalau email tidak berubah
-        |--------------------------------------------------------------------------
-        */
         $user->save();
 
         return back()->with('status', 'profile-updated');

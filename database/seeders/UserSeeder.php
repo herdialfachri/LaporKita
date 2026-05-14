@@ -13,8 +13,8 @@ class UserSeeder extends Seeder
         // Admin
         User::create([
             'division_id' => 2,
-            'name' => 'Admin',
-            'email' => 'admin@gmail.com',
+            'name' => 'Suhendi Wongso, S.H., M.H.',
+            'email' => 'suhendisyududu@gmail.com',
             'password' => Hash::make('password'),
 
             'identity_number' => '198505202010121003',
@@ -30,8 +30,8 @@ class UserSeeder extends Seeder
         // Staff
         User::create([
             'division_id' => 1,
-            'name' => 'Staff',
-            'email' => 'staff@gmail.com',
+            'name' => 'Bagas Ariyansyah, S.Kom',
+            'email' => 'bagashaahlah@gmail.com',
             'password' => Hash::make('password'),
 
             'identity_number' => '199103152019021004',
@@ -46,8 +46,8 @@ class UserSeeder extends Seeder
 
         // User / Masyarakat
         User::create([
-            'name' => 'User',
-            'email' => 'user@gmail.com',
+            'name' => 'M Herdi Al-Fachri',
+            'email' => 'alfachri75@gmail.com',
             'password' => Hash::make('password'),
 
             'identity_number' => '21305110100',
