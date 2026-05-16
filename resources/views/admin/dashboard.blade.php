@@ -1,13 +1,13 @@
 <x-layout>
   <x-slot:breadcrumb>
-    <li>Dashboard</li>
+    <li>Dashboard (Divisi {{ Auth::user()->division->name }})</li>
     </x-slot>
 
     {{-- SUBMISSION --}}
     <div class="staff-card">
       <div class="staff-card-header">
         <i class="mdi mdi-file-document-outline"></i>
-        <span>Daftar Pengajuan User (Divisi {{ Auth::user()->division->name }})</span>
+        <span>Daftar Pengajuan User</span>
       </div>
 
       <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
@@ -20,43 +20,90 @@
               <th>Lokasi</th>
               <th>Mulai</th>
               <th>Selesai</th>
-              <th>File</th>
+              <th>Diteruskan oleh</th>
+              <th>Catatan</th>
               <th>Status</th>
               <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
-            @foreach($submissions as $i => $submission)
+            @forelse($submissions as $i => $submission)
             <tr>
               <td style="color:var(--text-soft);font-size:.78rem;">{{ $i + 1 }}</td>
               <td style="max-width:220px;white-space:normal;font-weight:500;">{{ $submission->title }}</td>
               <td>{{ ucfirst($submission->type) }}</td>
               <td>{{ $submission->location }}</td>
-              <td style="white-space:nowrap;font-size:.8rem;">{{ $submission->start_date ?? '-' }}</td>
-              <td style="white-space:nowrap;font-size:.8rem;">{{ $submission->end_date ?? '-' }}</td>
-              <td>
-                @if ($submission->document_file)
-                <a href="{{ asset('storage/' . $submission->document_file) }}" target="_blank" class="btn-act">
-                  <i class="mdi mdi-file-eye"></i> Lihat
-                </a>
-                @else -
-                @endif
+              <td style="white-space:nowrap;font-size:.8rem;">
+                {{ $submission->start_date ? \Carbon\Carbon::parse($submission->start_date)->format('d M Y') : '-' }}
               </td>
+              <td style="white-space:nowrap;font-size:.8rem;">
+                {{ $submission->end_date ? \Carbon\Carbon::parse($submission->end_date)->format('d M Y') : '-' }}
+              </td>
+              <td style="font-size:.82rem;">{{ $submission->staff->name ?? '-' }}</td>
+              <td class="feedback-cell">{{ $submission->admin_notes ?? '-' }}</td>
               <td>
                 @switch($submission->status)
-                @case('verified') <span class="badge yellow">Terverifikasi</span> @break
-                @case('approved') <span class="badge green">Disetujui</span> @break
-                @case('rejected') <span class="badge red">Ditolak</span> @break
-                @case('submitted') <span class="badge blue">Diajukan</span> @break
+                @case('verified')
+                <span class="badge yellow">Terverifikasi</span>
+                @break
+
+                @case('approved')
+                <span class="badge green">Disetujui</span>
+                @break
+
+                @case('rejected')
+                <span class="badge red">Ditolak</span>
+                @break
+
+                @case('submitted')
+                <span class="badge blue">Diajukan</span>
+                @break
+
+                @case('revision')
+                <span class="badge red">Revisi</span>
+                @break
                 @endswitch
               </td>
               <td>
-                <button type="button" class="btn-act" onclick="openModal('submission-{{ $submission->id }}')">
-                  <i class="mdi mdi-pencil"></i> Edit
-                </button>
+                <div style="display:flex;align-items:center;gap:.35rem;flex-wrap:nowrap;">
+
+                  @if ($submission->document_file)
+                  <a href="{{ asset('storage/' . $submission->document_file) }}"
+                    target="_blank"
+                    class="btn-act">
+                    <i class="mdi mdi-file-eye"></i> Lihat
+                  </a>
+                  @endif
+
+                  @if (
+                  auth()->user()->role !== 'user' ||
+                  in_array($submission->status, ['submitted', 'revision'])
+                  )
+                  <button type="button"
+                    class="btn-act"
+                    onclick="openModal('submission-{{ $submission->id }}')">
+                    <i class="mdi mdi-pencil"></i> Edit
+                  </button>
+                  @else
+                  <button type="button"
+                    class="btn-act"
+                    disabled
+                    style="opacity:.45;cursor:not-allowed;">
+                    <i class="mdi mdi-lock"></i> Edit
+                  </button>
+                  @endif
+
+                </div>
               </td>
             </tr>
-            @endforeach
+            @empty
+            <tr>
+              <td colspan="10"
+                style="text-align:center;padding:2rem;color:var(--text-soft);">
+                Belum ada data pengajuan
+              </td>
+            </tr>
+            @endforelse
           </tbody>
         </table>
       </div>
@@ -79,12 +126,12 @@
               <th>Kategori</th>
               <th>Penanggung Jawab</th>
               <th>Status</th>
-              <th>Feedback Admin</th>
+              <th>Feedback</th>
               <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
-            @foreach($complaints as $i => $complaint)
+            @forelse($complaints as $i => $complaint)
             <tr>
               <td style="color:var(--text-soft);font-size:.78rem;">{{ $i + 1 }}</td>
               <td><span class="complaint-code">{{ $complaint->complaint_code }}</span></td>
@@ -101,12 +148,33 @@
               </td>
               <td class="feedback-cell">{{ $complaint->admin_feedback ?? '-' }}</td>
               <td>
-                <button type="button" class="btn-act" onclick="openModal('complaint-{{ $complaint->id }}')">
-                  <i class="mdi mdi-pencil"></i> Edit
-                </button>
+                <div style="display:flex;align-items:center;gap:.35rem;flex-wrap:nowrap;">
+
+                  @if ($complaint->evidence_file)
+                  <a href="{{ asset('storage/' . $complaint->evidence_file) }}"
+                    target="_blank"
+                    class="btn-act">
+                    <i class="mdi mdi-file-eye"></i> Lihat
+                  </a>
+                  @endif
+
+                  <button type="button"
+                    class="btn-act"
+                    onclick="openModal('complaint-{{ $complaint->id }}')">
+                    <i class="mdi mdi-pencil"></i> Edit
+                  </button>
+
+                </div>
               </td>
             </tr>
-            @endforeach
+            @empty
+            <tr>
+              <td colspan="8"
+                style="text-align:center;padding:2rem;color:var(--text-soft);">
+                Belum ada data pengaduan
+              </td>
+            </tr>
+            @endforelse
           </tbody>
         </table>
       </div>

@@ -26,27 +26,27 @@
         <form method="POST" action="{{ route('dashboard.submissions.store') }}" enctype="multipart/form-data">
           @csrf
 
-          {{-- Jenis --}}
-          <div style="margin-bottom:1rem;">
-            <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Jenis Pengajuan</label>
-            <select name="type" required style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;color:var(--navy);background:white;outline:none;">
-              <option value="">-- Pilih Jenis --</option>
-              <option value="magang" {{ old('type') === 'magang' ? 'selected' : '' }}>Magang</option>
-              <option value="pkl" {{ old('type') === 'pkl' ? 'selected' : '' }}>PKL</option>
-              <option value="penelitian" {{ old('type') === 'penelitian' ? 'selected' : '' }}>Penelitian</option>
-            </select>
-          </div>
-
-          {{-- Judul --}}
-          <div style="margin-bottom:1rem;">
-            <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Judul Pengajuan</label>
-            <input type="text" name="title" value="{{ old('title') }}" placeholder="Judul pengajuan" required style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;">
+          {{-- Jenis & Judul --}}
+          <div style="margin-bottom:1rem;display:flex;gap:1rem;flex-wrap:wrap;">
+            <div style="flex:1;min-width:140px;">
+              <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Jenis Pengajuan</label>
+              <select name="type" required style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;color:var(--navy);background:white;outline:none;">
+                <option value="">--Pilih Jenis Pengajuan--</option>
+                <option value="magang" {{ old('type') === 'magang' ? 'selected' : '' }}>Magang</option>
+                <option value="pkl" {{ old('type') === 'pkl' ? 'selected' : '' }}>PKL</option>
+                <option value="penelitian" {{ old('type') === 'penelitian' ? 'selected' : '' }}>Penelitian</option>
+              </select>
+            </div>
+            <div style="flex:1;min-width:140px;">
+              <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Judul Pengajuan</label>
+              <input type="text" name="title" value="{{ old('title') }}" placeholder="Contoh: Pengajuan Magang Kerja Lapangan Mahasiswa ITB" required style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;">
+            </div>
           </div>
 
           {{-- Lokasi --}}
           <div style="margin-bottom:1rem;">
             <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Lokasi</label>
-            <input type="text" name="location" value="{{ old('location') }}" placeholder="Lokasi kegiatan" required style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;">
+            <input type="text" name="location" value="{{ old('location') }}" placeholder="Contoh: Lapas Kelas II Kota Bandung Barat" required style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;">
           </div>
 
           {{-- Tanggal --}}
@@ -64,13 +64,13 @@
           {{-- Deskripsi --}}
           <div style="margin-bottom:1rem;">
             <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Deskripsi</label>
-            <textarea name="description" rows="4" placeholder="Jelaskan tujuan dan detail pengajuan" style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;resize:vertical;">{{ old('description') }}</textarea>
+            <textarea name="description" rows="3" placeholder="Jelaskan tujuan dengan detail serta jelaskan urgensinya" style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;resize:vertical;">{{ old('description') }}</textarea>
           </div>
 
           {{-- Upload --}}
           <div style="margin-bottom:1.5rem;">
             <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Dokumen (PDF, maks. 5MB)</label>
-            <input type="file" name="document_file" accept=".pdf" required style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;background:white;">
+            <input type="file" name="document_file" accept=".pdf" required class="file-input">
             <p style="font-size:.72rem;color:var(--text-soft);margin-top:.3rem;">Unggah dokumen pengajuan dalam format PDF</p>
           </div>
 
@@ -80,8 +80,8 @@
             <button type="submit" class="btn-submit">
               <i class="mdi mdi-send"></i> Kirim Pengajuan
             </button>
-            <a href="{{ route('dashboard.submissions') }}" style="display:inline-flex;align-items:center;gap:.3rem;padding:.37rem .85rem;background:#fee2e2;color:#991b1b;border:none;border-radius:7px;font-size:.78rem;font-weight:700;text-decoration:none;">
-              <i class="mdi mdi-cancel"></i> Batal
+            <a href="{{ route('dashboard.submissions') }}" class="btn-cancel">
+              <i class="mdi mdi-cancel"></i> Reset Formulir
             </a>
           </div>
 

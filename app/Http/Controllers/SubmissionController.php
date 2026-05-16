@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Complaint;
 use App\Models\Division;
 use App\Models\Submission;
+use Illuminate\Support\Facades\Storage;
 
 class SubmissionController extends Controller
 {
@@ -114,21 +115,79 @@ class SubmissionController extends Controller
                 'admin_notes' => $request->admin_notes,
             ]);
         } elseif (Auth::user()->role === 'staff') {
-            // Staff: disposisi saja (status proses + pilih divisi)
+
             $request->validate([
-                'status' => 'required|in:revision,verified,in_review',
-                'assigned_division_id' => 'required|exists:divisions,id',
+                'status' => 'nullable|in:revision,verified,in_review,approved,rejected',
+                'assigned_division_id' => 'nullable|exists:divisions,id',
             ]);
 
-            $submission->update([
-                'status' => $request->status,
-                'assigned_division_id' => $request->assigned_division_id,
+            $data = [
                 'assigned_staff_id' => Auth::id(),
-            ]);
+            ];
+
+            // update status kalau diisi
+            if ($request->filled('status')) {
+                $data['status'] = $request->status;
+            }
+
+            // update divisi kalau diisi
+            if ($request->filled('assigned_division_id')) {
+                $data['assigned_division_id'] = $request->assigned_division_id;
+            }
+
+            $submission->update($data);
         } else {
             abort(403, 'Forbidden');
         }
 
         return redirect()->back()->with('success', 'Status pengajuan berhasil diperbarui!');
+    }
+
+    public function edit(Submission $submission)
+    {
+        if ($submission->user_id !== Auth::id()) {
+            abort(403);
+        }
+
+        if (!in_array($submission->status, ['submitted', 'revision'])) {
+            abort(403, 'Pengajuan tidak bisa diedit');
+        }
+
+        return view('user.submissions_edit', compact('submission'));
+    }
+
+    public function userUpdate(Request $request, Submission $submission)
+    {
+        if ($submission->user_id !== Auth::id()) {
+            abort(403);
+        }
+
+        if (!in_array($submission->status, ['submitted', 'revision'])) {
+            return back()->with('error', 'Pengajuan tidak bisa diedit');
+        }
+
+        $request->validate([
+            'document_file' => 'required|file|mimes:pdf|max:5120',
+        ]);
+
+        // hapus file lama
+        if (
+            $submission->document_file &&
+            Storage::disk('public')->exists($submission->document_file)
+        ) {
+            Storage::disk('public')->delete($submission->document_file);
+        }
+
+        // upload file baru
+        $path = $request->file('document_file')
+            ->store('files/pengajuan', 'public');
+
+        // update data
+        $submission->update([
+            'document_file' => $path,
+            'status' => 'submitted',
+        ]);
+
+        return back()->with('success', 'Dokumen revisi berhasil diupload');
     }
 }

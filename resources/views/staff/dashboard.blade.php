@@ -1,6 +1,6 @@
 <x-layout>
   <x-slot:breadcrumb>
-    <li>Dashboard Admin</li>
+    <li>Dashboard</li>
     </x-slot>
 
     {{-- SUBMISSION --}}
@@ -15,43 +15,58 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Judul</th>
               <th>Jenis</th>
+              <th>Judul</th>
               <th>Lokasi</th>
+              <th>Divisi</th>
               <th>Mulai</th>
               <th>Selesai</th>
               <th>Status</th>
-              <th>Divisi</th>
               <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
-            @foreach($submissions as $i => $submission)
+            @forelse($submissions as $i => $submission)
             <tr>
               <td style="color:var(--text-soft);font-size:.78rem;">{{ $i + 1 }}</td>
-              <td style="max-width:220px;white-space:normal;font-weight:500;">{{ $submission->title }}</td>
               <td>{{ ucfirst($submission->type) }}</td>
+              <td style="max-width:220px;white-space:normal;font-weight:500;">{{ $submission->title }}</td>
               <td>{{ $submission->location }}</td>
+              <td style="font-size:.82rem;">{{ $submission->division->name ?? '-' }}</td>
               <td style="white-space:nowrap;font-size:.8rem;">{{ \Carbon\Carbon::parse($submission->start_date)->format('d M Y') }}</td>
               <td style="white-space:nowrap;font-size:.8rem;">{{ \Carbon\Carbon::parse($submission->end_date)->format('d M Y') }}</td>
               <td>
                 @switch($submission->status)
                 @case('submitted') <span class="badge blue">Diajukan</span> @break
-                @case('revision') <span class="badge red">Revisi</span> @break
+                @case('revision') <span class="badge red">Revisi Dokumen</span> @break
                 @case('verified') <span class="badge yellow">Terverifikasi</span> @break
                 @case('in_review') <span class="badge blue">Ditinjau</span> @break
                 @case('approved') <span class="badge green">Disetujui</span> @break
                 @case('rejected') <span class="badge red">Ditolak</span> @break
                 @endswitch
               </td>
-              <td style="font-size:.82rem;">{{ $submission->division->name ?? '-' }}</td>
               <td>
-                <button type="button" class="btn-act" onclick="openModal('sub-{{ $submission->id }}')">
-                  <i class="mdi mdi-pencil"></i> Edit
-                </button>
+                <div style="display:flex;align-items:center;gap:.35rem;flex-wrap:nowrap;">
+                  @if ($submission->document_file)
+                  <a href="{{ asset('storage/' . $submission->document_file) }}" target="_blank" class="btn-act">
+                    <i class="mdi mdi-file-eye"></i> Lihat
+                  </a>
+                  @endif
+
+                  <button type="button" class="btn-act" onclick="openModal('sub-{{ $submission->id }}')">
+                    <i class="mdi mdi-pencil"></i> Edit
+                  </button>
+                </div>
               </td>
             </tr>
-            @endforeach
+            @empty
+            <tr>
+              <td colspan="9"
+                style="text-align:center;padding:2rem;color:var(--text-soft);">
+                Belum ada data pengajuan
+              </td>
+            </tr>
+            @endforelse
           </tbody>
         </table>
       </div>
@@ -73,35 +88,50 @@
               <th>Judul</th>
               <th>Kategori</th>
               <th>Penanggung Jawab</th>
+              <th>Feedback</th>
               <th>Status</th>
-              <th>Feedback Admin</th>
               <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
-            @foreach($complaints as $i => $complaint)
+            @forelse($complaints as $i => $complaint)
             <tr>
               <td style="color:var(--text-soft);font-size:.78rem;">{{ $i + 1 }}</td>
               <td><span class="complaint-code">{{ $complaint->complaint_code }}</span></td>
               <td style="max-width:180px;white-space:normal;font-weight:500;">{{ $complaint->title }}</td>
               <td>{{ ucfirst($complaint->category) }}</td>
               <td style="font-size:.82rem;">{{ $complaint->assignedStaff->name ?? '-' }}</td>
+              <td class="feedback-cell">{{ $complaint->admin_feedback ?? '-' }}</td>
               <td>
                 @switch($complaint->status)
-                @case('submitted') <span class="badge blue">Diajukan</span> @break
+                @case('submitted') <span class="badge blue">Dikirim</span> @break
                 @case('in_review') <span class="badge yellow">Ditinjau</span> @break
                 @case('responded') <span class="badge green">Ditanggapi</span> @break
                 @case('closed') <span class="badge red">Ditutup</span> @break
                 @endswitch
               </td>
-              <td class="feedback-cell">{{ $complaint->admin_feedback ?? '-' }}</td>
               <td>
-                <button type="button" class="btn-act" onclick="openModal('cmp-{{ $complaint->id }}')">
-                  <i class="mdi mdi-pencil"></i> Edit
-                </button>
+                <div style="display:flex;align-items:center;gap:.35rem;flex-wrap:nowrap;">
+                  @if ($complaint->evidence_file)
+                  <a href="{{ asset('storage/' . $complaint->evidence_file) }}" target="_blank" class="btn-act">
+                    <i class="mdi mdi-file-eye"></i> Lihat
+                  </a>
+                  @endif
+
+                  <button type="button" class="btn-act" onclick="openModal('cmp-{{ $complaint->id }}')">
+                    <i class="mdi mdi-pencil"></i> Edit
+                  </button>
+                </div>
               </td>
             </tr>
-            @endforeach
+            @empty
+            <tr>
+              <td colspan="8"
+                style="text-align:center;padding:2rem;color:var(--text-soft);">
+                Belum ada data pengaduan
+              </td>
+            </tr>
+            @endforelse
           </tbody>
         </table>
       </div>
@@ -120,7 +150,7 @@
           @method('PATCH')
           <div style="margin-bottom:.8rem;">
             <label style="font-size:.78rem;font-weight:600;color:var(--navy);display:block;margin-bottom:.3rem;">Status</label>
-            <select name="status" required style="width:100%;padding:.45rem .7rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;">
+            <select name="status" style="width:100%;padding:.45rem .7rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;">
               <option value="" disabled selected>Pilih Status</option>
               <option value="revision">Revisi</option>
               <option value="verified">Terverifikasi</option>
@@ -129,7 +159,7 @@
           </div>
           <div style="margin-bottom:1rem;">
             <label style="font-size:.78rem;font-weight:600;color:var(--navy);display:block;margin-bottom:.3rem;">Divisi</label>
-            <select name="assigned_division_id" required style="width:100%;padding:.45rem .7rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;">
+            <select name="assigned_division_id" style="width:100%;padding:.45rem .7rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;">
               <option value="" disabled selected>Pilih Divisi</option>
               @foreach($divisions as $division)
               <option value="{{ $division->id }}">{{ $division->name }}</option>

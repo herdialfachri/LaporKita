@@ -42,6 +42,12 @@ Route::middleware(['auth', 'verified', 'role:user'])
         Route::post('/submissions', [SubmissionController::class, 'store'])
             ->name('submissions.store');
 
+        Route::patch('/submissions/{submission}/edit', [SubmissionController::class, 'userUpdate'])
+            ->name('submissions.update');
+
+        Route::patch('/submissions/{submission}', [SubmissionController::class, 'userUpdate'])
+            ->name('submissions.update');
+
         Route::get('/complaints', [ComplaintController::class, 'index'])
             ->name('complaints');
 

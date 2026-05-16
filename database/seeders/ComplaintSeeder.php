@@ -10,31 +10,31 @@ class ComplaintSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
-    {
-        DB::table('complaints')->insert([
-            [
-                'user_id' => 3,
+    // public function run(): void
+    // {
+    //     DB::table('complaints')->insert([
+    //         [
+    //             'user_id' => 3,
 
-                'assigned_staff_id' => 1,
+    //             'assigned_staff_id' => 1,
 
-                'complaint_code' => 'RPT20260510',
+    //             'complaint_code' => 'RPT20260510',
 
-                'title' => 'Pelayanan Terlalu Lama',
+    //             'title' => 'Pelayanan Terlalu Lama',
 
-                'category' => 'pelayanan',
+    //             'category' => 'pelayanan',
 
-                'description' => 'Proses pelayanan pengajuan dirasa terlalu lama dan tidak ada informasi lanjutan.',
+    //             'description' => 'Proses pelayanan pengajuan dirasa terlalu lama dan tidak ada informasi lanjutan.',
 
-                'evidence_file' => 'complaints/bukti-pengaduan.jpg',
+    //             'evidence_file' => 'complaints/bukti-pengaduan.jpg',
 
-                'status' => 'in_review',
+    //             'status' => 'in_review',
 
-                'admin_feedback' => 'Pengaduan sedang kami tindak lanjuti.',
+    //             'admin_feedback' => 'Pengaduan sedang kami tindak lanjuti.',
 
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-        ]);
-    }
+    //             'created_at' => now(),
+    //             'updated_at' => now(),
+    //         ],
+    //     ]);
+    // }
 }

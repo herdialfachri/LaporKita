@@ -13,8 +13,8 @@ class UserSeeder extends Seeder
         // Admin
         User::create([
             'division_id' => 2,
-            'name' => 'Suhendi Wongso, S.H., M.H.',
-            'email' => 'suhendisyududu@gmail.com',
+            'name' => 'Farhat Abbas',
+            'email' => 'farhatabbas@gmail.com',
             'password' => Hash::make('password'),
 
             'identity_number' => '198505202010121003',
@@ -23,6 +23,7 @@ class UserSeeder extends Seeder
 
             'role' => 'admin',
             'status' => 'active',
+            'email_verified_at' => now(),
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -30,8 +31,8 @@ class UserSeeder extends Seeder
         // Staff
         User::create([
             'division_id' => 1,
-            'name' => 'Bagas Ariyansyah, S.Kom',
-            'email' => 'bagashaahlah@gmail.com',
+            'name' => 'Ahmad Dhani',
+            'email' => 'ahmaddhani@gmail.com',
             'password' => Hash::make('password'),
 
             'identity_number' => '199103152019021004',
@@ -40,6 +41,43 @@ class UserSeeder extends Seeder
 
             'role' => 'staff',
             'status' => 'active',
+            'email_verified_at' => now(),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        // Admin 2
+        User::create([
+            'division_id' => 2,
+            'name' => 'Luna Maya',
+            'email' => 'lunamaya@gmail.com',
+            'password' => Hash::make('password'),
+
+            'identity_number' => '198505202010121005',
+            'phone' => '081234567893',
+            'institution' => 'Kantor Wilayah Direktorat Jenderal Pemasyarakatan Jawa Barat',
+
+            'role' => 'admin',
+            'status' => 'active',
+            'email_verified_at' => now(),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        // Staff 2
+        User::create([
+            'division_id' => 1,
+            'name' => 'Aganta Syududu',
+            'email' => 'gantasyududu@gmail.com',
+            'password' => Hash::make('password'),
+
+            'identity_number' => '199103152019021006',
+            'phone' => '081234567894',
+            'institution' => 'Kantor Wilayah Direktorat Jenderal Pemasyarakatan Jawa Barat',
+
+            'role' => 'staff',
+            'status' => 'active',
+            'email_verified_at' => now(),
             'created_at' => now(),
             'updated_at' => now(),
         ]);

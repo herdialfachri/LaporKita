@@ -29,14 +29,14 @@
           {{-- Judul --}}
           <div style="margin-bottom:1rem;">
             <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Judul Pengaduan</label>
-            <input type="text" name="title" value="{{ old('title') }}" placeholder="Masukkan judul pengaduan" style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;">
+            <input type="text" name="title" value="{{ old('title') }}" placeholder="Contoh: Pengajuan saya tidak diproses selama 1 minggu" style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;">
           </div>
 
           {{-- Kategori --}}
           <div style="margin-bottom:1rem;">
             <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Kategori</label>
             <select name="category" style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;color:var(--navy);background:white;outline:none;">
-              <option value="">Pilih kategori</option>
+              <option value="">--Pilih Kategori--</option>
               <option value="pelayanan">Pelayanan</option>
               <option value="petugas">Petugas</option>
               <option value="fasilitas">Fasilitas</option>
@@ -48,13 +48,13 @@
           {{-- Deskripsi --}}
           <div style="margin-bottom:1rem;">
             <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Deskripsi Pengaduan</label>
-            <textarea name="description" rows="4" placeholder="Jelaskan pengaduan anda" style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;resize:vertical;">{{ old('description') }}</textarea>
+            <textarea name="description" rows="4" placeholder="Jelaskan secara jelas masalah yang Anda alami" style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;resize:vertical;">{{ old('description') }}</textarea>
           </div>
 
           {{-- Upload --}}
           <div style="margin-bottom:1.5rem;">
             <label style="display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;">Upload Bukti</label>
-            <input type="file" name="evidence_file" accept=".jpg,.jpeg,.png,.pdf" style="width:100%;padding:.5rem .75rem;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.85rem;outline:none;background:white;">
+            <input type="file" name="evidence_file" accept=".jpg,.jpeg,.png,.pdf" class="file-input">
             <p style="font-size:.72rem;color:var(--text-soft);margin-top:.3rem;">Format: JPG, PNG, PDF (Max 5MB)</p>
           </div>
 
@@ -64,8 +64,8 @@
             <button type="submit" class="btn-submit">
               <i class="mdi mdi-send"></i> Kirim Pengaduan
             </button>
-            <button type="reset" style="display:inline-flex;align-items:center;gap:.3rem;padding:.37rem .85rem;background:#fee2e2;color:#991b1b;border:none;border-radius:7px;font-size:.78rem;font-weight:700;cursor:pointer;">
-              <i class="mdi mdi-refresh"></i> Reset
+            <button type="reset" class="btn-cancel">
+              <i class="mdi mdi-refresh"></i> Reset Formulir
             </button>
           </div>
 
