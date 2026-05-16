@@ -44,7 +44,7 @@
               <td style="white-space:nowrap;font-size:.8rem;">{{ $submission->end_date ? \Carbon\Carbon::parse($submission->end_date)->format('d M Y') : '-' }}</td>
               <td>
                 @if ($submission->status == 'submitted') <span class="badge blue">Dikirim</span>
-                @elseif ($submission->status == 'revision') <span class="badge red">Revisi</span>
+                @elseif ($submission->status == 'revision') <span class="badge red">Revisi Dokumen</span>
                 @elseif ($submission->status == 'verified') <span class="badge yellow">Terverifikasi</span>
                 @elseif ($submission->status == 'in_review') <span class="badge blue">Sedang Ditinjau</span>
                 @elseif ($submission->status == 'approved') <span class="badge green">Disetujui</span>

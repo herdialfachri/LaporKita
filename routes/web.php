@@ -7,10 +7,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ComplaintController;
 use App\Http\Controllers\SubmissionController;
+use App\Http\Controllers\LandingPageController;
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/', [LandingPageController::class, 'index'])->name('home');
 
 Route::middleware(['auth', 'verified', 'role:user'])
     ->prefix('dashboard')
