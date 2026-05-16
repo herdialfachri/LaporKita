@@ -3,6 +3,14 @@
     <li>Dashboard</li>
     </x-slot>
 
+    {{-- SUCCESS TOAST --}}
+    @if (session('success'))
+    <div class="toast-success" role="alert">
+      <i class="mdi mdi-check-circle"></i>
+      <span>{{ session('success') }}</span>
+    </div>
+    @endif
+
     {{-- SUBMISSION --}}
     <div class="staff-card">
       <div class="staff-card-header">
@@ -21,6 +29,8 @@
               <th>Divisi</th>
               <th>Mulai</th>
               <th>Selesai</th>
+              <th>Diteruskan oleh</th>
+              <th>Disetujui oleh</th>
               <th>Status</th>
               <th>Aksi</th>
             </tr>
@@ -35,6 +45,8 @@
               <td style="font-size:.82rem;">{{ $submission->division->name ?? '-' }}</td>
               <td style="white-space:nowrap;font-size:.8rem;">{{ \Carbon\Carbon::parse($submission->start_date)->format('d M Y') }}</td>
               <td style="white-space:nowrap;font-size:.8rem;">{{ \Carbon\Carbon::parse($submission->end_date)->format('d M Y') }}</td>
+              <td style="font-size:.82rem;">{{ $submission->staff->name ?? '-' }}</td>
+              <td style="font-size:.82rem;">{{ $submission->admin->name ?? '-' }}</td>
               <td>
                 @switch($submission->status)
                 @case('submitted') <span class="badge blue">Diajukan</span> @break
@@ -87,7 +99,8 @@
               <th>Kode</th>
               <th>Judul</th>
               <th>Kategori</th>
-              <th>Penanggung Jawab</th>
+              <th>Diteruskan oleh</th>
+              <th>Ditanggapi oleh</th>
               <th>Feedback</th>
               <th>Status</th>
               <th>Aksi</th>
@@ -101,6 +114,7 @@
               <td style="max-width:180px;white-space:normal;font-weight:500;">{{ $complaint->title }}</td>
               <td>{{ ucfirst($complaint->category) }}</td>
               <td style="font-size:.82rem;">{{ $complaint->assignedStaff->name ?? '-' }}</td>
+              <td style="font-size:.82rem;">{{ $complaint->admin->name ?? '-' }}</td>
               <td class="feedback-cell">{{ $complaint->admin_feedback ?? '-' }}</td>
               <td>
                 @switch($complaint->status)

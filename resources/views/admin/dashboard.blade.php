@@ -3,6 +3,14 @@
     <li>Dashboard (Divisi {{ Auth::user()->division->name }})</li>
     </x-slot>
 
+    {{-- SUCCESS TOAST --}}
+    @if (session('success'))
+    <div class="toast-success" role="alert">
+      <i class="mdi mdi-check-circle"></i>
+      <span>{{ session('success') }}</span>
+    </div>
+    @endif
+
     {{-- SUBMISSION --}}
     <div class="staff-card">
       <div class="staff-card-header">
@@ -18,9 +26,10 @@
               <th>Judul</th>
               <th>Jenis</th>
               <th>Lokasi</th>
-              <th>Mulai</th>
-              <th>Selesai</th>
+              <th>Tanggal Mulai</th>
+              <th>Tanggal Selesai</th>
               <th>Diteruskan oleh</th>
+              <th>Disetujui oleh</th>
               <th>Catatan</th>
               <th>Status</th>
               <th>Aksi</th>
@@ -40,6 +49,7 @@
                 {{ $submission->end_date ? \Carbon\Carbon::parse($submission->end_date)->format('d M Y') : '-' }}
               </td>
               <td style="font-size:.82rem;">{{ $submission->staff->name ?? '-' }}</td>
+              <td style="font-size:.82rem;">{{ $submission->admin->name ?? '-' }}</td>
               <td class="feedback-cell">{{ $submission->admin_notes ?? '-' }}</td>
               <td>
                 @switch($submission->status)
@@ -124,7 +134,8 @@
               <th>Kode</th>
               <th>Judul</th>
               <th>Kategori</th>
-              <th>Penanggung Jawab</th>
+              <th>Diteruskan oleh</th>
+              <th>Ditanggapi oleh</th>
               <th>Status</th>
               <th>Feedback</th>
               <th>Aksi</th>
@@ -138,6 +149,7 @@
               <td style="max-width:180px;white-space:normal;font-weight:500;">{{ $complaint->title }}</td>
               <td>{{ ucfirst($complaint->category) }}</td>
               <td style="font-size:.82rem;">{{ $complaint->assignedStaff->name ?? '-' }}</td>
+              <td style="font-size:.82rem;">{{ $complaint->admin->name ?? '-' }}</td>
               <td>
                 @switch($complaint->status)
                 @case('submitted') <span class="badge blue">Diajukan</span> @break

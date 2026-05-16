@@ -9,6 +9,7 @@ class Complaint extends Model
     protected $fillable = [
         'user_id',
         'assigned_staff_id',
+        'assigned_admin_id',
         'complaint_code',
         'title',
         'category',
@@ -26,5 +27,9 @@ class Complaint extends Model
     public function assignedStaff()
     {
         return $this->belongsTo(User::class, 'assigned_staff_id');
+    }
+    public function admin()
+    {
+        return $this->belongsTo(User::class, 'assigned_admin_id');
     }
 }

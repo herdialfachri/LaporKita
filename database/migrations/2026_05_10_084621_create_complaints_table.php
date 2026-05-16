@@ -19,8 +19,14 @@ return new class extends Migration
                 ->constrained()
                 ->cascadeOnDelete();
 
-            // Admin/staff yang menangani
+            // Staff yang menangani
             $table->foreignId('assigned_staff_id')
+                ->nullable()
+                ->constrained('users')
+                ->nullOnDelete();
+
+            // Admin yang menangani
+            $table->foreignId('assigned_admin_id')
                 ->nullable()
                 ->constrained('users')
                 ->nullOnDelete();

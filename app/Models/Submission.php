@@ -10,6 +10,7 @@ class Submission extends Model
         'user_id',
         'assigned_division_id',
         'assigned_staff_id',
+        'assigned_admin_id',
         'type',
         'title',
         'description',
@@ -39,5 +40,9 @@ class Submission extends Model
     public function staff()
     {
         return $this->belongsTo(User::class, 'assigned_staff_id');
+    }
+    public function admin()
+    {
+        return $this->belongsTo(User::class, 'assigned_admin_id');
     }
 }

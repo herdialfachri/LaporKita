@@ -77,6 +77,7 @@ class ComplaintController extends Controller
         $complaint->update([
             'status' => $validated['status'],
             'admin_feedback' => $validated['admin_feedback'],
+            'assigned_admin_id' => Auth::id(),
         ]);
 
         return back()->with('success', 'Feedback admin berhasil dikirim.');

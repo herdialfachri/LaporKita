@@ -25,8 +25,14 @@ return new class extends Migration
                 ->constrained('divisions')
                 ->nullOnDelete();
 
-            // Admin / staff yang menangani
+            // Staff yang menangani
             $table->foreignId('assigned_staff_id')
+                ->nullable()
+                ->constrained('users')
+                ->nullOnDelete();
+
+            // Admin yang menangani
+            $table->foreignId('assigned_admin_id')
                 ->nullable()
                 ->constrained('users')
                 ->nullOnDelete();

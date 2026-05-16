@@ -113,6 +113,7 @@ class SubmissionController extends Controller
             $submission->update([
                 'status' => $request->status,
                 'admin_notes' => $request->admin_notes,
+                'assigned_admin_id' => Auth::id(),
             ]);
         } elseif (Auth::user()->role === 'staff') {
 
