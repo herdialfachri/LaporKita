@@ -19,7 +19,7 @@ $complaintsRoute = $role === 'user' ? route('dashboard.complaints') : $dashboard
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Title  -->
-  <title>Tailwind News Template | Tailnews</title>
+  <title>Selamat Datang di Website SiPenapasJabar</title>
   <meta name="description" content="Tailwind CSS News Template">
 
   <!-- Development css -->
@@ -32,7 +32,7 @@ $complaintsRoute = $role === 'user' ? route('dashboard.complaints') : $dashboard
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
 
   <!-- Favicon  -->
-  <link rel="icon" href="assets/landing_page/src/img/favicon.jpg">
+  <link rel="icon" href="assets/landing_page/src/img/kemenkumham.png">
 </head>
 
 <body class="text-gray-700 pt-9 sm:pt-10">

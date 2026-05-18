@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lupa Password | LaporKita</title>
+    <title>Lupa Password | SiPenapasJabar</title>
 
-    <link rel="icon" href="{{ asset('assets/landing_page/src/img/favicon.jpg') }}">
+    <link rel="icon" href="{{ asset('assets/landing_page/src/img/kemenkumham.png') }}">
 
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
