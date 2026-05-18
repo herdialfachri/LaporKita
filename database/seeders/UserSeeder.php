@@ -12,9 +12,9 @@ class UserSeeder extends Seeder
     {
         // Admin
         User::create([
-            'division_id' => 2,
-            'name' => 'Farhat Abbas',
-            'email' => 'farhatabbas@gmail.com',
+            'division_id' => 1,
+            'name' => 'Admin 1',
+            'email' => 'admin1@gmail.com',
             'password' => Hash::make('password'),
 
             'identity_number' => '198505202010121003',
@@ -30,31 +30,13 @@ class UserSeeder extends Seeder
 
         // Staff
         User::create([
-            'division_id' => 1,
-            'name' => 'Ahmad Dhani',
-            'email' => 'ahmaddhani@gmail.com',
+            'division_id' => 2,
+            'name' => 'Admin 2',
+            'email' => 'admin2@gmail.com',
             'password' => Hash::make('password'),
 
             'identity_number' => '199103152019021004',
             'phone' => '081234567891',
-            'institution' => 'Kantor Wilayah Direktorat Jenderal Pemasyarakatan Jawa Barat',
-
-            'role' => 'staff',
-            'status' => 'active',
-            'email_verified_at' => now(),
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-
-        // Admin 2
-        User::create([
-            'division_id' => 2,
-            'name' => 'Luna Maya',
-            'email' => 'lunamaya@gmail.com',
-            'password' => Hash::make('password'),
-
-            'identity_number' => '198505202010121005',
-            'phone' => '081234567893',
             'institution' => 'Kantor Wilayah Direktorat Jenderal Pemasyarakatan Jawa Barat',
 
             'role' => 'admin',
@@ -64,11 +46,27 @@ class UserSeeder extends Seeder
             'updated_at' => now(),
         ]);
 
+        // Admin 2
+        User::create([
+            'name' => 'Staff 1',
+            'email' => 'staff1@gmail.com',
+            'password' => Hash::make('password'),
+
+            'identity_number' => '198505202010121005',
+            'phone' => '081234567893',
+            'institution' => 'Kantor Wilayah Direktorat Jenderal Pemasyarakatan Jawa Barat',
+
+            'role' => 'staff',
+            'status' => 'active',
+            'email_verified_at' => now(),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
         // Staff 2
         User::create([
-            'division_id' => 1,
-            'name' => 'Aganta Syududu',
-            'email' => 'gantasyududu@gmail.com',
+            'name' => 'Staff 2',
+            'email' => 'staff2@gmail.com',
             'password' => Hash::make('password'),
 
             'identity_number' => '199103152019021006',

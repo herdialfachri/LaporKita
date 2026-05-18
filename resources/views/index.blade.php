@@ -466,85 +466,90 @@ $complaintsRoute = $role === 'user' ? route('dashboard.complaints') : $dashboard
             <div class="flex flex-row flex-wrap -mx-3">
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
-                  <a href="">
-                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img6.jpg" alt="alt title">
+                  <a href="#">
+                    <img class="max-w-full w-full mx-auto" src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=400&h=250&fit=crop" alt="Berita 1">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">Peluncuran Portal Layanan Digital Terpadu Pemasyarakatan Jabar</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Portal baru mengintegrasikan pengajuan dan pengaduan dalam satu platform yang mudah diakses.</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Inovasi</a>
                   </div>
                 </div>
               </div>
+
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
-                  <a href="">
-                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img7.jpg" alt="alt title">
+                  <a href="#">
+                    <img class="max-w-full w-full mx-auto" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=250&fit=crop" alt="Berita 2">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">Pelatihan Petugas Layanan Publik Berbasis Standar Pelayanan Minimal</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Seluruh petugas loket mengikuti pelatihan intensif untuk meningkatkan kualitas pelayanan kepada masyarakat.</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>SDM</a>
                   </div>
                 </div>
               </div>
+
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
-                  <a href="">
-                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img8.jpg" alt="alt title">
+                  <a href="#">
+                    <img class="max-w-full w-full mx-auto" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=250&fit=crop" alt="Berita 3">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">Mahasiswa Universitas Padjadjaran Selesaikan Program Magang di Lapas Sukamiskin</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Sebanyak 24 mahasiswa Unpad resmi menyelesaikan program magang selama tiga bulan.</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Magang</a>
                   </div>
                 </div>
               </div>
+
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
-                  <a href="">
-                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img9.jpg" alt="alt title">
+                  <a href="#">
+                    <img class="max-w-full w-full mx-auto" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=250&fit=crop" alt="Berita 4">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">Kunjungan Inspektorat: Audit Kualitas Pelayanan Kanwil Jabar Hasilkan Nilai A</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Hasil audit internal menunjukkan peningkatan signifikan dalam kepuasan masyarakat terhadap layanan.</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Audit</a>
                   </div>
                 </div>
               </div>
+
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
-                  <a href="">
-                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img10.jpg" alt="alt title">
+                  <a href="#">
+                    <img class="max-w-full w-full mx-auto" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=250&fit=crop" alt="Berita 5">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">Penandatanganan MoU dengan 10 Perguruan Tinggi se-Jawa Barat</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Kerja sama resmi dibuka untuk mendukung program magang, PKL, dan penelitian di lingkungan pemasyarakatan.</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Kerjasama</a>
                   </div>
                 </div>
               </div>
+
               <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                 <div class="flex flex-row sm:block hover-img">
-                  <a href="">
-                    <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img11.jpg" alt="alt title">
+                  <a href="#">
+                    <img class="max-w-full w-full mx-auto" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=250&fit=crop" alt="Berita 6">
                   </a>
                   <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                     <h3 class="text-lg font-bold leading-tight mb-2">
-                      <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                      <a href="#">Jadwal Pendaftaran Magang dan PKL Semester Ganjil 2025/2026 Dibuka</a>
                     </h3>
-                    <p class="hidden md:block text-gray-600 leading-tight mb-1">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Pendaftaran dibuka mulai 1 Juli 2025. Kuota terbatas, segera ajukan melalui portal layanan.</p>
+                    <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Pengumuman</a>
                   </div>
                 </div>
               </div>
@@ -555,10 +560,12 @@ $complaintsRoute = $role === 'user' ? route('dashboard.complaints') : $dashboard
             <div class="w-full bg-gray-50 h-full">
               <div class="text-sm py-6 sticky">
                 <div class="w-full text-center">
-                  <a class="uppercase" href="#">Advertisement</a>
-                  <a href="#">
-                    <img class="mx-auto" src="assets/landing_page/src/img/ads/250.jpg" alt="advertisement area">
-                  </a>
+                  <div style="background: linear-gradient(135deg, #07213e, #0f3d6e); border-radius: 8px; padding: 20px; color: white;">
+                    <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-bottom: 8px;">Pengumuman</p>
+                    <p style="font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Pendaftaran Magang & PKL Semester Ganjil 2025/2026</p>
+                    <p style="font-size: 12px; color: #cbd5e1; margin-bottom: 16px;">Kuota terbatas! Daftarkan diri Anda sebelum 30 Juni 2025.</p>
+                    <a href="{{ $submissionsRoute }}" style="display: inline-block; background: #e11d48; color: white; padding: 8px 18px; border-radius: 4px; font-size: 13px; font-weight: 600; text-decoration: none;">Daftar Sekarang</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -584,89 +591,94 @@ $complaintsRoute = $role === 'user' ? route('dashboard.complaints') : $dashboard
                     <li class="splide__slide">
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
-                          <a href="">
-                            <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img14.jpg" alt="alt title">
+                          <a href="#">
+                            <img class="max-w-full w-full mx-auto" src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=400&h=250&fit=crop" alt="Gedung Kanwil">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
-                              <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                              <a href="#">Gedung Kantor Wilayah Ditjenpas Jawa Barat</a>
                             </h3>
-                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Fasilitas</a>
                           </div>
                         </div>
                       </div>
                     </li>
+
                     <li class="splide__slide">
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
-                          <a href="">
-                            <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img15.jpg" alt="alt title">
+                          <a href="#">
+                            <img class="max-w-full w-full mx-auto" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=250&fit=crop" alt="Kegiatan Sosialisasi">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
-                              <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                              <a href="#">Kegiatan Sosialisasi Layanan bersama Mahasiswa</a>
                             </h3>
-                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Kegiatan</a>
                           </div>
                         </div>
                       </div>
                     </li>
+
                     <li class="splide__slide">
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
-                          <a href="">
-                            <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img16.jpg" alt="alt title">
+                          <a href="#">
+                            <img class="max-w-full w-full mx-auto" src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=400&h=250&fit=crop" alt="Pelayanan Terpadu">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
-                              <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                              <a href="#">Pelayanan Terpadu Masyarakat di Loket Kanwil</a>
                             </h3>
-                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Pelayanan</a>
                           </div>
                         </div>
                       </div>
                     </li>
+
                     <li class="splide__slide">
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
-                          <a href="">
-                            <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img17.jpg" alt="alt title">
+                          <a href="#">
+                            <img class="max-w-full w-full mx-auto" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&h=250&fit=crop" alt="Program Magang">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
-                              <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                              <a href="#">Peserta Program Magang Angkatan Semester Genap 2025</a>
                             </h3>
-                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Magang</a>
                           </div>
                         </div>
                       </div>
                     </li>
+
                     <li class="splide__slide">
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
-                          <a href="">
-                            <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img18.jpg" alt="alt title">
+                          <a href="#">
+                            <img class="max-w-full w-full mx-auto" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=250&fit=crop" alt="Apel Pegawai">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
-                              <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                              <a href="#">Apel Pagi Pegawai Kanwil Ditjenpas Jabar</a>
                             </h3>
-                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Pegawai</a>
                           </div>
                         </div>
                       </div>
                     </li>
+
                     <li class="splide__slide">
                       <div class="w-full pb-3">
                         <div class="hover-img bg-white">
-                          <a href="">
-                            <img class="max-w-full w-full mx-auto" src="assets/landing_page/src/img/dummy/img1.jpg" alt="alt title">
+                          <a href="#">
+                            <img class="max-w-full w-full mx-auto" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=250&fit=crop" alt="Rapat Koordinasi">
                           </a>
                           <div class="py-3 px-6">
                             <h3 class="text-lg font-bold leading-tight mb-2">
-                              <a href="#">5 Tips to Save Money Booking Your Next Hotel Room</a>
+                              <a href="#">Rapat Koordinasi Peningkatan Kualitas Layanan Publik</a>
                             </h3>
-                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Europe</a>
+                            <a class="text-gray-500" href="#"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Koordinasi</a>
                           </div>
                         </div>
                       </div>
@@ -699,15 +711,13 @@ $complaintsRoute = $role === 'user' ? route('dashboard.complaints') : $dashboard
                     <img class="max-w-full w-full mx-auto h-auto" src="assets/landing_page/src/img/dummy/img15.jpg" alt="Image description">
                   </a>
                   <div class="absolute px-5 pt-8 pb-5 bottom-0 w-full bg-gradient-cover">
-                    <!--title-->
                     <a href="#">
-                      <h2 class="text-3xl font-bold capitalize text-white mb-3">Amazon Shoppers Are Ditching Designer Belts for This Best-Selling</h2>
+                      <h2 class="text-3xl font-bold capitalize text-white mb-3">Kanwil Ditjenpas Jabar Raih Predikat WBK dari Kemenpan-RB Tahun 2025</h2>
                     </a>
-                    <p class="text-gray-100 hidden sm:inline-block">This is a wider card with supporting text below as a natural lead-in to additional content. This very helpfull for generate default content..</p>
-                    <!-- author and date -->
+                    <p class="text-gray-100 hidden sm:inline-block">Penghargaan Wilayah Bebas Korupsi diraih berkat komitmen pelayanan publik yang transparan, akuntabel, dan bebas pungli di lingkungan Kanwil Jawa Barat.</p>
                     <div class="pt-2">
                       <div class="text-gray-100">
-                        <div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>Europe
+                        <div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>Prestasi
                       </div>
                     </div>
                   </div>
@@ -805,23 +815,23 @@ $complaintsRoute = $role === 'user' ? route('dashboard.complaints') : $dashboard
             <div class="w-full bg-white">
               <div class="mb-6">
                 <div class="p-4 bg-gray-100">
-                  <h2 class="text-lg font-bold">Most Popular</h2>
+                  <h2 class="text-lg font-bold">Berita Populer</h2>
                 </div>
                 <ul class="post-number">
                   <li class="border-b border-gray-100 hover:bg-gray-50">
-                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="#">Why the world would end without political polls</a>
+                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="#">Cara Daftar dan Mengajukan Magang di Kanwil Ditjenpas Jabar</a>
                   </li>
                   <li class="border-b border-gray-100 hover:bg-gray-50">
-                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="#">Meet The Man Who Designed The Ducati Monster</a>
+                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="#">Syarat dan Dokumen Pengajuan PKL di Lembaga Pemasyarakatan</a>
                   </li>
                   <li class="border-b border-gray-100 hover:bg-gray-50">
-                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="#">2020 Audi R8 Spyder spy shots release</a>
+                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="#">Alur Pengaduan Pelayanan: Dari Pelaporan Hingga Penyelesaian</a>
                   </li>
                   <li class="border-b border-gray-100 hover:bg-gray-50">
-                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="#">Lamborghini makes Huracán GT3 racer faster for 2019</a>
+                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="#">Panduan Lengkap Pengajuan Izin Penelitian di Lapas/Rutan Jabar</a>
                   </li>
                   <li class="border-b border-gray-100 hover:bg-gray-50">
-                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="#">ZF plans $14 billion autonomous vehicle push, concept van</a>
+                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="#">Kanwil Jabar Buka 200 Kuota Magang untuk Tahun 2025</a>
                   </li>
                 </ul>
               </div>
@@ -829,10 +839,12 @@ $complaintsRoute = $role === 'user' ? route('dashboard.complaints') : $dashboard
 
             <div class="text-sm py-6 sticky">
               <div class="w-full text-center">
-                <a class="uppercase" href="#">Advertisement</a>
-                <a href="#">
-                  <img class="mx-auto" src="assets/landing_page/src/img/ads/250.jpg" alt="advertisement area">
-                </a>
+                <div style="background: linear-gradient(135deg, #07213e, #0f3d6e); border-radius: 8px; padding: 20px; color: white;">
+                  <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-bottom: 8px;">Pengumuman</p>
+                  <p style="font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Pendaftaran Magang & PKL Semester Ganjil 2025/2026</p>
+                  <p style="font-size: 12px; color: #cbd5e1; margin-bottom: 16px;">Kuota terbatas! Daftarkan diri Anda sebelum 30 Juni 2025.</p>
+                  <a href="{{ $submissionsRoute }}" style="display: inline-block; background: #e11d48; color: white; padding: 8px 18px; border-radius: 4px; font-size: 13px; font-weight: 600; text-decoration: none;">Daftar Sekarang</a>
+                </div>
               </div>
             </div>
           </div>
@@ -919,94 +931,87 @@ $complaintsRoute = $role === 'user' ? route('dashboard.complaints') : $dashboard
 
   <!-- =========={ FOOTER }==========  -->
   <footer style="background-color: #07213e;" class="text-gray-400">
-    <!--Footer content-->
     <div id="footer-content" class="relative pt-8 xl:pt-16 pb-6 xl:pb-12">
       <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2 overflow-hidden">
         <div class="flex flex-wrap flex-row lg:justify-between -mx-3">
+          <!-- Kiri: identitas -->
           <div class="flex-shrink max-w-full w-full lg:w-2/5 px-3 lg:pr-16">
-            <div class="flex items-center mb-2">
-              <span class="text-3xl leading-normal mb-2 font-bold text-gray-100 mt-2">TailNews</span>
-              <!-- <img src="assets/landing_page/src/img-min/logo.png" alt="LOGO"> -->
+            <div class="flex items-center mb-4">
+              <img src="{{ asset('assets/landing_page/src/img/kemenkumham.png') }}" alt="Logo" style="height: 50px; width: auto; margin-right: 12px;">
+              <div>
+                <span class="block text-white font-bold text-base leading-tight">Kantor Wilayah</span>
+                <span class="block text-gray-300 text-sm leading-tight">Ditjenpas Jawa Barat</span>
+              </div>
             </div>
-            <p>Tailwind News Template for build great newspapper, magazine and news portal.</p>
-            <ul class="space-x-3 mt-6 mb-6 Lg:mb-0">
-              <!--facebook-->
+            <p class="mb-4">Melayani masyarakat dengan transparan, profesional, dan berintegritas dalam bidang pemasyarakatan di wilayah Jawa Barat.</p>
+            <p class="mb-1"><span class="text-white">Alamat:</span> Jl. Jakarta No.27, Bandung, Jawa Barat 40272</p>
+            <p class="mb-1"><span class="text-white">Telepon:</span> (022) 7275164</p>
+            <p class="mb-4"><span class="text-white">Email:</span> kanwiljabar@ditjenpas.go.id</p>
+            <ul class="space-x-3 mt-4">
               <li class="inline-block">
-                <a class="hover:text-gray-100" rel="noopener noreferrer" href="#!" title="Facebook">
-                  <!-- <i class="fab fa-facebook fa-2x"></i> -->
+                <a class="hover:text-gray-100" href="#!" title="Facebook">
                   <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512">
                     <path fill="currentColor" d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path>
                   </svg>
                 </a>
               </li>
-              <!--twitter-->
               <li class="inline-block">
-                <a class="hover:text-gray-100" rel="noopener noreferrer" href="#!" title="Twitter">
-                  <!-- <i class="fab fa-twitter fa-2x"></i> -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"></path>
-                  </svg>
-                </a>
-              </li>
-              <!--youtube-->
-              <li class="inline-block">
-                <a class="hover:text-gray-100" rel="noopener noreferrer" href="#!" title="Youtube">
-                  <!-- <i class="fab fa-youtube fa-2x"></i> -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M508.64,148.79c0-45-33.1-81.2-74-81.2C379.24,65,322.74,64,265,64H247c-57.6,0-114.2,1-169.6,3.6-40.8,0-73.9,36.4-73.9,81.4C1,184.59-.06,220.19,0,255.79q-.15,53.4,3.4,106.9c0,45,33.1,81.5,73.9,81.5,58.2,2.7,117.9,3.9,178.6,3.8q91.2.3,178.6-3.8c40.9,0,74-36.5,74-81.5,2.4-35.7,3.5-71.3,3.4-107Q512.24,202.29,508.64,148.79ZM207,353.89V157.39l145,98.2Z"></path>
-                  </svg>
-                </a>
-              </li>
-              <!--instagram-->
-              <li class="inline-block">
-                <a class="hover:text-gray-100" rel="noopener noreferrer" href="#!" title="Instagram">
-                  <!-- <i class="fab fa-instagram fa-2x"></i> -->
+                <a class="hover:text-gray-100" href="#!" title="Instagram">
                   <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512">
                     <path fill="currentColor" d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"></path>
                     <path fill="currentColor" d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"></path>
                     <path fill="currentColor" d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"></path>
                   </svg>
                 </a>
-              </li><!--end instagram-->
+              </li>
+              <li class="inline-block">
+                <a class="hover:text-gray-100" href="#!" title="Youtube">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512">
+                    <path fill="currentColor" d="M508.64,148.79c0-45-33.1-81.2-74-81.2C379.24,65,322.74,64,265,64H247c-57.6,0-114.2,1-169.6,3.6-40.8,0-73.9,36.4-73.9,81.4C1,184.59-.06,220.19,0,255.79q-.15,53.4,3.4,106.9c0,45,33.1,81.5,73.9,81.5,58.2,2.7,117.9,3.9,178.6,3.8q91.2.3,178.6-3.8c40.9,0,74-36.5,74-81.5,2.4-35.7,3.5-71.3,3.4-107Q512.24,202.29,508.64,148.79ZM207,353.89V157.39l145,98.2Z"></path>
+                  </svg>
+                </a>
+              </li>
             </ul>
           </div>
+
+          <!-- Kanan: link navigasi -->
           <div class="flex-shrink max-w-full w-full lg:w-3/5 px-3">
             <div class="flex flex-wrap flex-row">
               <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
-                <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Product</h4>
+                <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Layanan</h4>
                 <ul>
-                  <li class="py-1 hover:text-white"><a href="#">Landing</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Pages</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Sections</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Sign Up</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Login</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Pengajuan Magang</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Pengajuan PKL</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Pengajuan Penelitian</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Pengaduan Pelayanan</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Pengaduan Sistem</a></li>
                 </ul>
               </div>
               <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
-                <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Support</h4>
+                <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Informasi</h4>
                 <ul>
-                  <li class="py-1 hover:text-white"><a href="#">Documentation</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Changelog</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Tools</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Icons</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Berita Terbaru</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Galeri Kegiatan</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Pengumuman</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">FAQ</a></li>
                 </ul>
               </div>
               <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
-                <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Includes</h4>
+                <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Panduan</h4>
                 <ul>
-                  <li class="py-1 hover:text-white"><a href="#">Utilities</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Components</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Example code</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Updates</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Cara Pengajuan</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Cara Pengaduan</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Download Formulir</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Syarat &amp; Ketentuan</a></li>
                 </ul>
               </div>
               <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
-                <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Legal</h4>
+                <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Institusi</h4>
                 <ul>
-                  <li class="py-1 hover:text-white hover:text-white"><a href="#">Privacy Policy</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">Terms of Use</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">License</a></li>
-                  <li class="py-1 hover:text-white"><a href="#">GDPR</a></li>
+                  <li class="py-1 hover:text-white"><a href="https://www.kemenkumham.go.id" target="_blank">Kemenkumham RI</a></li>
+                  <li class="py-1 hover:text-white"><a href="https://ditjenpas.go.id" target="_blank">Ditjen Pemasyarakatan</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Profil Kanwil Jabar</a></li>
+                  <li class="py-1 hover:text-white"><a href="#">Struktur Organisasi</a></li>
                 </ul>
               </div>
             </div>
@@ -1015,17 +1020,18 @@ $complaintsRoute = $role === 'user' ? route('dashboard.complaints') : $dashboard
       </div>
     </div>
 
-    <!--Start footer copyright-->
     <div class="footer-dark">
       <div class="py-4 border-t border-gray-200 border-opacity-10">
         <div class="row">
           <div class="col-12 col-md text-center">
-            <p class="d-block my-3 text-center">All rights reserved by <a href="https://aribudin.gumroad.com/" target="_blank" class="font-bold text-white">Ari Budin</a> • Distributed by <a href="https://themewagon.com/" target="_blank" class="font-bold text-white">ThemeWagon</a></p>
+            <p class="d-block my-3 text-center">
+              &copy; 2025 Kantor Wilayah Direktorat Jenderal Pemasyarakatan Jawa Barat &mdash; Kementerian Hukum dan HAM RI
+            </p>
           </div>
         </div>
       </div>
-    </div><!--End footer copyright-->
-  </footer><!-- end footer -->
+    </div>
+  </footer>
 
   <!-- =========={ SCROLL TO TOP }==========  -->
   <a href="#" class="back-top fixed p-4 rounded bg-gray-100 border border-gray-100 text-gray-500 right-4 bottom-4 hidden" aria-label="Scroll To Top">
